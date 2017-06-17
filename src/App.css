@@ -1,21 +1,56 @@
 .App {
   text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.button {
+  display: block;
+  background-color: #C43627;
+  padding:20px;
+  width:20%;
+  margin: 0px auto;
+  border-radius: 4px;
+  transition: 2s ease all;
+}
+
+.button:hover {
+  background-color: #991F16;
+  transition: 1s ease all;
+}
+
+.button a {
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 50px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  background: url(landscape.svg) top center repeat-x, linear-gradient(#92D2C4,#AECBA0);
+  padding: 120px;
+  color: #991F16;
 }
 
-.App-intro {
-  font-size: large;
+.App-header h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 4em;
+  margin: 0px;
+  padding: 0px 0px 50px 0px;
+}
+
+.Content {
+  background: #FAF6EC;
+  height:200px;
+}
+
+.Content h2 {
+  margin:0;
+  padding:14px 0px;
+  font-weight: 300;
 }
 
 @keyframes App-logo-spin {
