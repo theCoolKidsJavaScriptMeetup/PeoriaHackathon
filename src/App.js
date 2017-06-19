@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+
+import Button from './compenents/Button';
+
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,7 +13,8 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1>Peoria Hacks</h1>
-          <div className="button"><a href="#">Sign up now</a></div>
+          <Button text="My Btn"></Button>
+          <Button text="My Btn 2"></Button>
         </div>
 
         <div className="Content">
