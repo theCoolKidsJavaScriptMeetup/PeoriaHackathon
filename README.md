@@ -1,4 +1,4 @@
-# Peoria Hackathlon
+# Peoria Hackathlon by the Cool Kids
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
