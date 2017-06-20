@@ -25,11 +25,11 @@
 }
 
 .App-logo {
-  height: 50px;
+  height: 55px;
 }
 
 .App-header {
-  background: url(landscape.svg) top center repeat-x, linear-gradient(#92D2C4,#AECBA0);
+  background: url(landscape.svg) repeat-x center bottom, linear-gradient(#92D2C4,#AECBA0);
   padding: 120px;
   color: #991F16;
 }
@@ -39,7 +39,7 @@
   font-weight: 300;
   font-size: 4em;
   margin: 0px;
-  padding: 0px 0px 50px 0px;
+  padding: 7px 0px 10px 0px;
 }
 
 .Content {
