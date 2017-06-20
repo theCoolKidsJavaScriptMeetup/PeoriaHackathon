@@ -3,12 +3,18 @@
   font-family: 'Helvetica Neue', sans-serif;
 }
 
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
 .button {
   display: block;
   background-color: #C43627;
-  padding:16px 20px;
-  width:20%;
-  margin: 6px auto;
+  padding:16px 0px;
+  width:100%;
+  margin: 6px;
   border-radius: 24px;
   transition: 2s ease all;
 }
@@ -27,6 +33,7 @@
 }
 
 .button a {
+  display: block;
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
@@ -37,12 +44,12 @@
 }
 
 .App-logo {
-  height: 55px;
+  width:100%;
 }
 
 .App-header {
   background: url(landscape.svg) repeat-x center bottom, linear-gradient(#92D2C4,#AECBA0);
-  padding: 120px;
+  padding: 120px 0px;
   color: #991F16;
 }
 
@@ -54,6 +61,11 @@
   padding: 7px 0px 10px 0px;
 }
 
+.header-wrap {
+  width:40%;
+  margin: 0px auto;
+}
+
 .Content {
   background: #FAF6EC;
   height:200px;
@@ -63,6 +75,15 @@
   margin:0;
   padding:14px 0px;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 500px) {
+  .header-wrap {
+    width: 90%;
+  }
+  .button-group {
+    flex-direction: column;
+  }
 }
 
 @keyframes App-logo-spin {
