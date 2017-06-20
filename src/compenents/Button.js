@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 
+type SoshalTextProps = {
+  href: String,
+  style: Object,
+  children?: String
+}
+
 export default class Button extends Component {
     render() {
         return (
-            <div className="button"><a href="#">{this.props.text}</a></div>
+            <div style={this.props.style} className="button"><a href={this.props.href || '#'}>{this.props.children}</a></div>
         );
     }
 }
