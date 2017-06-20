@@ -6,11 +6,15 @@
 .button {
   display: block;
   background-color: #C43627;
-  padding:20px;
+  padding:16px 20px;
   width:20%;
-  margin: 0px auto;
-  border-radius: 4px;
+  margin: 6px auto;
+  border-radius: 24px;
   transition: 2s ease all;
+}
+
+.button.whitebutton {
+    background-color: #FFF;
 }
 
 .button:hover {
@@ -18,10 +22,18 @@
   transition: 1s ease all;
 }
 
+.button.whitebutton:hover {
+    background-color: #E2E2E2;
+}
+
 .button a {
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.button.whitebutton a{
+    color: #C43627;
 }
 
 .App-logo {

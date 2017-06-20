@@ -19,7 +19,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1>Peoria Hacks</h1>
             <Button href="/">Main</Button>
-            <Button href="sponsors">Sponsors</Button>
+            <Button href="sponsors" styleName="whitebutton">Sponsors</Button>
             <Button href="registration">Get Registered</Button>
           </div>
 
