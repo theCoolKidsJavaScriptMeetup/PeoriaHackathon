@@ -10,6 +10,10 @@ import logo from './logo.png';
 import './App.css';
 
 class App extends Component {
+  componentWillMount () {
+    // console.log(firebase);
+  }
+
   render() {
     return (
       <Router>
@@ -20,7 +24,7 @@ class App extends Component {
                 <a href="/">
                   <img src={logo} className="App-logo" alt="logo" />
                 </a>
-                
+
                 <h2>July 29, 2017 - 9am-6pm</h2>
                 <div className="button-group">
                   <Button href="registration">Get Registered</Button>
