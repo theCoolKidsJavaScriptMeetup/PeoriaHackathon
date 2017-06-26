@@ -3,35 +3,55 @@
   font-family: 'Helvetica Neue', sans-serif;
 }
 
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
 .button {
   display: block;
-  background-color: #C43627;
-  padding:20px;
-  width:20%;
-  margin: 0px auto;
-  border-radius: 4px;
+  background-color: #0074A5;
+  padding:16px 0px;
+  width:100%;
+  margin: 6px;
+  border-radius: 24px;
   transition: 2s ease all;
 }
 
+.button.whitebutton {
+    background-color: #FFF;
+    border:1px solid #0074A5;
+}
+
 .button:hover {
-  background-color: #991F16;
+  background-color: #005AFF;
   transition: 1s ease all;
 }
 
+.button.whitebutton:hover {
+    background-color: #EEF2F3;
+}
+
 .button a {
+  display: block;
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
 }
 
+.button.whitebutton a{
+    color: #0074A5;
+}
+
 .App-logo {
-  height: 50px;
+  width:100%;
 }
 
 .App-header {
-  background: url(landscape.svg) top center repeat-x, linear-gradient(#92D2C4,#AECBA0);
-  padding: 120px;
-  color: #991F16;
+  background: url(waves.svg) repeat center, linear-gradient(#FFF,#FFF);
+  padding: 170px 0px;
+  color: #169AFC;
 }
 
 .App-header h1 {
@@ -39,18 +59,49 @@
   font-weight: 300;
   font-size: 4em;
   margin: 0px;
-  padding: 0px 0px 50px 0px;
+  padding: 7px 0px 10px 0px;
+}
+
+.header-wrap {
+  width:40%;
+  margin: 0px auto;
+  padding:10px;
+  background-color: #FFF;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.11);
+  transform: skew(20deg, -14deg);
+}
+
+.header-content {
+  transform: skew(-20deg, 14deg);
 }
 
 .Content {
-  background: #FAF6EC;
-  height:200px;
+    background: #005aff;
+    color: #FFF;
+    height: 200px;
 }
 
 .Content h2 {
   margin:0;
   padding:14px 0px;
   font-weight: 300;
+  font-size: 3em;
+}
+
+@media only screen and (max-width: 500px) {
+  .App-header {
+    background-size: 90%;
+  }
+  .header-wrap {
+    width: 90%;
+    transform: skew(0deg, 0deg);
+  }
+  .header-content {
+  transform: skew(0deg, 0deg);
+  }
+  .button-group {
+    flex-direction: column;
+  }
 }
 
 @keyframes App-logo-spin {
