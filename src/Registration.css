@@ -1,0 +1,31 @@
+.register_form {
+  width:70%;
+  margin: 0px auto;
+}
+
+.register_form form {
+  display:block;
+  text-align: left;
+  padding:20px;
+}
+
+.register_form form label {
+  font-size: 1.4em;
+  margin: 10px 0px;
+  display: block;
+}
+
+.register_form form input {
+  display: block;
+  padding:10px 0px 10px 20px;
+  width:100%;
+  font-size: 2em;
+}
+
+.register_form form select {
+  width:100%;
+  font-size: 1.4em;
+  padding:10px;
+  margin: 18px auto 8px auto;
+  -webkit-appearance: none;
+}
