@@ -5,8 +5,8 @@ import ReactFireMixin from 'reactfire'
 
 import Button from './Button';
 
-
 import '../App.css';
+import '../Registration.css'
 
 var config = {
   apiKey: "AIzaSyAR6WiLvKXj9_nS8NZELe7xhHLVxIov70E",
@@ -76,20 +76,14 @@ export default class Registration extends Component {
 
   renderForm() {
     return (
-      <div style={{ flexDirection: 'column', backgroundColor: 'purple' }}>
+      <div className="register_form">
         <form onSubmit={this.newUser}>
-          <label>
-            First Name
-            <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleInputChange} />
-          </label>
-          <label>
-            Last Name
-            <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleInputChange} />
-          </label>
-          <label>
-            Email
-            <input type="text" name="email" value={this.state.email} onChange={this.handleInputChange} />
-          </label>
+          <label>First Name</label>
+            <input type="text" name="firstName" placeholder={this.state.firstName} onChange={this.handleInputChange} />
+          <label>Last Name</label>
+            <input type="text" name="lastName" placeholder={this.state.lastName} onChange={this.handleInputChange} />
+          <label>Email</label>
+            <input type="text" name="email" placeholder={this.state.email} onChange={this.handleInputChange} />
           <select value={this.state.skill} name="skill" onChange={this.handleInputChange}>
             <option value='Select Skill' disabled>Select Skill</option>
             <option value="Other">Other</option>
@@ -97,7 +91,7 @@ export default class Registration extends Component {
             <option value="Developer">Developer</option>
             <option value="Designer">Designer</option>
           </select>
-          <input type="submit" value="Submit" />
+          <Button styleName="whitebutton"><input type="submit" value="Submit" /></Button>
         </form>
       </div>
     )
