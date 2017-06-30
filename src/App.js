@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+import Navigation from './compenents/Navigation';
 import Button from './compenents/Button';
 import Main from './compenents/Main';
 import Sponsors from './compenents/Sponsors';
@@ -18,13 +19,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <Navigation />
           <div className="App-header">
             <div className="header-wrap">
               <div className="header-content">
-                <a href="/">
-                  <img src={logo} className="App-logo" alt="logo" />
-                </a>
-
+                <h1>Connect. Collaborate. Create.</h1>
                 <h2>August 12, 2017 - 9am-6pm</h2>
                 <div className="button-group">
                   <Button href="registration">Get Registered</Button>

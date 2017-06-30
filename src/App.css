@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -17,6 +16,7 @@
   margin: 6px;
   border-radius: 24px;
   transition: 2s ease all;
+  text-align: center;
 }
 
 .button.whitebutton {
@@ -49,8 +49,8 @@
 }
 
 .App-header {
-  background: url(waves.svg) repeat center, linear-gradient(#FFF,#FFF);
-  padding: 170px 0px;
+  background: url(waves.svg) repeat center, linear-gradient(#d95e6a,#f9ab5f);
+  padding: 210px 0px 130px 0px;
   color: #169AFC;
 }
 
@@ -63,16 +63,13 @@
 }
 
 .header-wrap {
-  width:40%;
+  color: #FFF;
+  width:63%;
   margin: 0px auto;
-  padding:10px;
-  background-color: #FFF;
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.11);
-  transform: skew(20deg, -14deg);
 }
 
 .header-content {
-  transform: skew(-20deg, 14deg);
+  text-align: center;
 }
 
 .Content {
@@ -85,6 +82,7 @@
   padding:14px 0px;
   font-weight: 300;
   font-size: 3em;
+  text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
@@ -93,17 +91,8 @@
   }
   .header-wrap {
     width: 90%;
-    transform: skew(0deg, 0deg);
-  }
-  .header-content {
-  transform: skew(0deg, 0deg);
   }
   .button-group {
     flex-direction: column;
   }
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
