@@ -1,6 +1,7 @@
 .Navigation {
     background: #FFF;
     width:100%;
+    padding:10px 0px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -10,6 +11,8 @@
 
 .Navigation ul {
     list-style: none;
+    margin:0px 0px 0px 20px;
+    padding:0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -41,11 +44,17 @@
 @media only screen and (max-width: 500px) {
     .Navigation {
         flex-direction: column;
+        position: relative;
     }
     .Navigation ul{
-        flex-direction: column;
+        flex-direction: row;
+        margin:0px 0px 0px 0px;
+    }
+    .Navigation ul li {
+        padding:17px 7px;
     }
     .Nav_logo {
-        width:200px;
+        width:215px;
+        padding: 0px;
     }
 }

@@ -87,10 +87,13 @@
 
 @media only screen and (max-width: 500px) {
   .App-header {
-    background-size: 90%;
+    padding: 70px 0px;
   }
   .header-wrap {
     width: 90%;
+  }
+  .header-content h1 {
+    font-size: 3em;
   }
   .button-group {
     flex-direction: column;
