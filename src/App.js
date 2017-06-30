@@ -25,7 +25,7 @@ class App extends Component {
                   <img src={logo} className="App-logo" alt="logo" />
                 </a>
 
-                <h2>July 29, 2017 - 9am-6pm</h2>
+                <h2>August 12, 2017 - 9am-6pm</h2>
                 <div className="button-group">
                   <Button href="registration">Get Registered</Button>
                   <Button href="sponsors" styleName="whitebutton">Sponsors</Button>
