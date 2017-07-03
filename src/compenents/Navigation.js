@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import Main from '../compenents/Main';
-import Sponsors from '../compenents/Sponsors';
-import Registration from '../compenents/Registration';
-
 import logo from '../logo.png';
 import '../App.css';
 import '../Navigation.css';

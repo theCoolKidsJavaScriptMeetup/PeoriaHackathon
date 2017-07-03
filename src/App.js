@@ -25,7 +25,7 @@ class App extends Component {
             <div className="header-wrap">
               <div className="header-content">
                 <h1>Connect. Collaborate. Create.</h1>
-                <h2>August 12, 2017 - 9am-6pm</h2>
+                <h2>August 12, 2017 - 9am-9pm</h2>
                 <div className="button-group">
                   <Button href="registration">Get Registered</Button>
                   <Button href="sponsors" styleName="whitebutton">Sponsors</Button>
