@@ -6,6 +6,7 @@ import Button from './compenents/Button';
 import Main from './compenents/Main';
 import Sponsors from './compenents/Sponsors';
 import Registration from './compenents/Registration';
+import FAQ from './compenents/FAQ';
 
 import logo from './logo.png';
 import './App.css';
@@ -36,6 +37,7 @@ class App extends Component {
           <Route exact path="/" component={Main}/>
           <Route exact path="/sponsors" component={Sponsors}/>
           <Route exact path="/registration" component={Registration}/>
+          <Route exact path="/faq" component={FAQ}/>
         </div>
       </Router>
     );

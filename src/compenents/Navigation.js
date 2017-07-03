@@ -20,7 +20,7 @@ export default class Navigation extends Component {
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="registration">Registration</a></li>
-            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="faq">FAQ</a></li>
             <li><a href="sponsors">Sponsors</a></li>
         </ul>
       </div>
