@@ -85,6 +85,36 @@
   text-align: center;
 }
 
+.flexColumn {
+  flex-Direction: column,;
+}
+
+.sponsorBlurb {
+  flex: none;
+}
+
+.sponsorTitle {
+  flex: none;
+}
+
+.sponsorImage {
+  width: 500px;
+  height: 400px;
+}
+
+.sponsorContainer {
+  display: flex;
+  flexdDirection: row;
+  background: #eee;
+  width: 770px;
+  margin: 30px auto;
+  padding: 18px;
+}
+
+.blackText {
+  color: #000;
+}
+
 @media only screen and (max-width: 500px) {
   .App-header {
     padding: 70px 0px;
