@@ -11,6 +11,7 @@ export default class Header extends Component {
 	            <div className="header-content">
 	                <h1>Connect. Collaborate. Create.</h1>
 	                <h2>August 12, 2017 - 9am-9pm</h2>
+	                <h3>Peoria Civic Center (Verizon Lounge)</h3>
 	                <div className="button-group">
 	                  <Button href="registration">Get Registered</Button>
 	                  <Button href="sponsors" styleName="whitebutton">Sponsors</Button>

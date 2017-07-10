@@ -9,7 +9,7 @@ import '../App.css';
 export default class Main extends Component {
   render() {
     return (
-    	<div>
+    	<div className="color-cover">
 	    	<Header />
 	        <div className="Content">
 		    	<div className="intro_message">
