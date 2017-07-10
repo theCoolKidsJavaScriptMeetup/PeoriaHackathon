@@ -10,7 +10,7 @@ export default class Navigation extends Component {
     return (
       <div className="Navigation">
         <div className="Nav_logo">
-          <img src={logo} className="Nav_Logo" alt="logo" />
+          <a href="/"><img src={logo} className="Nav_Logo" alt="logo" /></a>
         </div>
 
         <ul>

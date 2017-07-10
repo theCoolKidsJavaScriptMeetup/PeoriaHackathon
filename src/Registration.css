@@ -1,6 +1,9 @@
 .register_form {
-  width:70%;
-  margin: 0px auto;
+    width: 50%;
+    color: #0074a5;
+    margin: 40px auto 0px auto;
+    background: #ffffff;
+    box-shadow: 1px 1px 20px rgba(32, 72, 88, 0.51);
 }
 
 .register_form form {
@@ -18,14 +21,24 @@
 .register_form form input {
   display: block;
   padding:10px 0px 10px 20px;
-  width:100%;
-  font-size: 2em;
+  width:97%;
+  font-size: 1.4em;
 }
 
 .register_form form select {
   width:100%;
   font-size: 1.4em;
   padding:10px;
-  margin: 18px auto 8px auto;
   -webkit-appearance: none;
+}
+
+.button.registerbutton {
+  cursor: pointer;
+    background-color: #0074A5;
+    border:1px solid #FFF;
+    font-size:17px;
+    text-transform: uppercase;
+    color:#FFF;
+    width:80%;
+    margin:20px auto;
 }
