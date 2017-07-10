@@ -84,6 +84,7 @@ export default class Registration extends Component {
             <input type="text" name="lastName" placeholder={this.state.lastName} onChange={this.handleInputChange} />
           <label>Email</label>
             <input type="text" name="email" placeholder={this.state.email} onChange={this.handleInputChange} />
+          <label>Select Your Skill</label>
           <select value={this.state.skill} name="skill" onChange={this.handleInputChange}>
             <option value='Select Skill' disabled>Select Skill</option>
             <option value="Other">Other</option>
@@ -91,7 +92,7 @@ export default class Registration extends Component {
             <option value="Developer">Developer</option>
             <option value="Designer">Designer</option>
           </select>
-          <Button styleName="whitebutton"><input type="submit" value="Submit" /></Button>
+         <button className="button registerbutton" type="submit" value="Submit">Register</button>
         </form>
       </div>
     )
