@@ -167,11 +167,14 @@ body {
   .App-header {
     padding: 70px 0px;
   }
+  .Content {
+    padding-top:0px;
+  }
   .header-wrap {
     width: 90%;
   }
   .header-content h1 {
-    font-size: 3em;
+    font-size: 2.6em;
   }
   .button-group {
     flex-direction: column;
