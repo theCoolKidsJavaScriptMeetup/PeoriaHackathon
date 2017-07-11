@@ -54,12 +54,13 @@ body {
 }
 
 .color-cover {
-  background: url(hack.jpg) no-repeat top right;
+  background: url(skyline.jpg) no-repeat top center;
+  background-size: 100%;
 }
 
 .App-header {
   
-  background: linear-gradient(rgba(217, 94, 106, 0.85),rgba(249, 171, 95, 0.9), rgba(249, 171, 95, 1));
+  background: linear-gradient(rgba(217, 94, 106, 0.9),rgba(249, 171, 95, 0.9));
   padding: 210px 0px 130px 0px;
   color: #169AFC;
 }
@@ -73,10 +74,12 @@ body {
 }
 
 .App-header h2 {
+  font-size: 30px;
   margin:25px 0px 0px 0px;
 }
 
 .App-header h3 {
+  font-size: 24px;
   font-weight: 300;
   margin:0px 0px 35px 0px;
 }
@@ -94,6 +97,11 @@ body {
 .Content {
     background: #0074A5;
     color: #FFF;
+    padding-top:96px;
+}
+
+.Content-home {
+  padding-top:0px !important;
 }
 
 .Content h2 {
@@ -107,6 +115,7 @@ body {
 .intro_message {
   width:70%;
   margin:0px auto;
+  padding:50px 0px;
   text-align: center;
 }
 

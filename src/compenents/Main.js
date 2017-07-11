@@ -11,7 +11,7 @@ export default class Main extends Component {
     return (
     	<div className="color-cover">
 	    	<Header />
-	        <div className="Content">
+	        <div className="Content Content-home">
 		    	<div className="intro_message">
 			    	<h3 align="center">On Saturday, August 12th, 2017 The City of Peoria will host the area’s first civic hackathon to engage the local tech community for the purpose of innovating new civic tech solutions.</h3>
 			    	<p>Teams of 2-7 participants will utilize City data while competing to create a website, app, or other tool that could improve the lives of people who live, work, and play in the Peoria area. The event has already gained interest from over 100 community members and is expected to attract 50+ participants for the 12 hour session.</p>
