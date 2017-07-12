@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import Navigation from './compenents/Navigation';
-import Button from './compenents/Button';
-import Main from './compenents/Main';
-import Sponsors from './compenents/Sponsors';
-import Registration from './compenents/Registration';
-import FAQ from './compenents/FAQ';
+import Navigation from './components/Navigation';
+import Button from './components/Button';
+import Main from './components/Main';
+import Sponsors from './components/Sponsors';
+import Registration from './components/Registration';
+import FAQ from './components/FAQ';
 
 import logo from './logo.png';
 import './App.css';
