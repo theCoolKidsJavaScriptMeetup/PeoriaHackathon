@@ -10,14 +10,14 @@ export default class Navigation extends Component {
     return (
       <div className="Navigation">
         <div className="Nav_logo">
-          <a href="/"><img src={logo} className="Nav_Logo" alt="logo" /></a>
+          <Link to="/"><img src={logo} className="Nav_Logo" alt="logo" /></Link>
         </div>
 
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="registration">Registration</a></li>
-            <li><a href="faq">FAQ</a></li>
-            <li><a href="sponsors">Sponsors</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/registration">Registration</Link></li>
+            <li><Link to="/faq">FAQ</Link></li>
+            <li><Link to="/sponsors">Sponsors</Link></li>
         </ul>
       </div>
     );
