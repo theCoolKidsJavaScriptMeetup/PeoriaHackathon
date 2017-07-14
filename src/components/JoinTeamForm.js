@@ -5,14 +5,24 @@ import Firebase from 'firebase'
 import ReactMixin from 'react-mixin'
 import ReactFireMixin from 'reactfire'
 
-const JoinTeamForm = ({ match }) => {
+const JoinTeamForm = ({ match, history }) => {
+    var teamName = match.params.id
     return (<div className='Content'>
         <h2>Join A Team</h2>
+        {
+          
+          (match.params.id === "new-team") ?
+            <div>
+              <p>Success! You have created your team.</p>
+              <p>Please enter your team name and password.</p>
+            </div>
+            : null
+        }
         <div className="register_form">
             <TeamForm 
-                action={ match.params.id }
-                team={{ name: '', password: '' }
-            }/>
+                team={{ name: '', password: '' }}
+                history={history}
+            />
         </div>
     </div>)
 }
@@ -32,7 +42,7 @@ const formikTeamEnhancer = Formik({
       teamName: props.team.name,
       teamPassword: props.team.password
   }),
-  handleSubmit: payload => {
+  handleSubmit: (payload, {props, setErrors, setSubmitting }) => {
     // test for existence
     // var ref = Firebase.database().ref("teams");
     // console.log(ref)
@@ -47,11 +57,13 @@ const formikTeamEnhancer = Formik({
         // var firstName = snapshot.child("name/first").val(); // "Ada"
         // var lastName = snapshot.child("name").child("last").val(); // "Lovelace"
         // var age = snapshot.child("age").val(); // null
-    });
+    // });
 
-    // if(res["[[PromiseStatus]]"] === "resolved") {
-    //   history.push('/register')
-    // }
+    setSubmitting(false)
+    // setErrors({teamName: "Sorry, that's not an existing team"})
+    // setErrors({teamPassword: "Invalid Password"})
+
+    props.history.push('/register/' + payload.teamName)
   },
   displayName: 'JoinTeamForm',
 });

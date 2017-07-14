@@ -5,14 +5,15 @@ import Firebase from 'firebase'
 import ReactMixin from 'react-mixin'
 import ReactFireMixin from 'reactfire'
 
-const CreateTeamForm = ({ match }) => {
+const CreateTeamForm = ({ match, history }) => {
+  console.log(match.params)
     return (<div className='Content'>
         <h2>Create A Team</h2>
         <div className="register_form">
             <TeamForm 
-                action={ match.params.id }
-                team={{ name: '', password: '' }
-            }/>
+                team={{ name: '', password: '' }}
+                history={history}
+            />
         </div>
     </div>)
 }
@@ -30,17 +31,26 @@ const formikTeamEnhancer = Formik({
   }),
   mapPropsToValues: props => ({ 
       teamName: props.team.name,
-      teamPassword: props.team.password
+      teamPassword: props.team.password,
+      confirmTeamPassword: ''
   }),
-  handleSubmit: payload => {
-    var teamData = payload;
-    var newTeamKey = Firebase.database().ref().child('teams').push().key;
+  handleSubmit: (payload, {props, setErrors, setSubmitting }) => {
 
-    var updates = {};
-    updates['/teams/' + newTeamKey] = teamData;
+    // Confirm password
+    if(payload.teamPassword !== payload.confirmTeamPassword) {
+      setErrors({confirmTeamPassword: "Error: Passwords do not match."})
+    } else {
+      var teamData = payload;
+      delete teamData["confirmTeamPassword"]
+      var newTeamKey = Firebase.database().ref().child('teams').push().key;
 
-    return Firebase.database().ref().update(updates)
-      .catch(err => console.log('err', err));
+      var updates = {};
+      updates['/teams/' + newTeamKey] = teamData;
+
+      Firebase.database().ref().update(updates)
+        .then(props.history.push('/registerTeam/join/new-team'))
+        .catch(err => console.log('err', err));
+      }
   },
   displayName: 'CreateTeamForm',
 });
@@ -95,8 +105,7 @@ const TeamFormikForm = ({
         {errors.teamPassword}
       </div>}
     {/* Confirm Password */}
-    {values.action === "create_team" ? 
-    <div><label htmlFor="confirmTeamPassword" style={{ display: 'block' }}>
+    <label htmlFor="confirmTeamPassword" style={{ display: 'block' }}>
       Confirm Password
     </label>
     <input
@@ -114,7 +123,8 @@ const TeamFormikForm = ({
       touched.confirmTeamPassword &&
       <div className="input-feedback">
         {errors.confirmTeamPassword}
-      </div>} </div>: null }
+      </div>
+    }
     <button type="submit">Submit</button>
   </form>;
 

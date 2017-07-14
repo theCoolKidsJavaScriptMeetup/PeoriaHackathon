@@ -12,18 +12,22 @@ import ReactFireMixin from 'reactfire'
         console.log(this.props)
         return ( 
         <div className='Content'>
+            <h2>Almost There!</h2>
             {
                 (this.props.match.params.id === "individual") ? 
                     <h3>You are registering as an Individual</h3> :
                     <h3>You are registering with Team {this.props.match.params.id}</h3> 
             }
         <div className="register_form">
-            <Form user={{ 
+            <Form 
+              user={{ 
                 email: '',
                 firstName: '',
                 lastName: '',
                 teamName: this.props.match.params.id
-            }} /> 
+              }}
+              history={this.props.history}
+             /> 
         </div>
         </div>
      )
@@ -48,7 +52,7 @@ const formikEnhancer = Formik({
       lastName: props.user.lastName,
       team: props.user.teamName
   }),
-  handleSubmit: payload => {
+  handleSubmit: (payload, {props}) => {
     var userData = payload;
     var newUserKey = Firebase.database().ref().child('users').push().key;
 
@@ -56,6 +60,7 @@ const formikEnhancer = Formik({
     updates['/users/' + newUserKey] = userData;
 
     var res =  Firebase.database().ref().update(updates)
+      .then(props.history.push('/registered'))
       .catch(err => console.log('err', err));
   },
   displayName: 'RegistrationForm',
