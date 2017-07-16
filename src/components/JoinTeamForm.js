@@ -43,27 +43,36 @@ const formikTeamEnhancer = Formik({
       teamPassword: props.team.password
   }),
   handleSubmit: (payload, {props, setErrors, setSubmitting }) => {
+    // setSubmitting(false)
+    
+
+    // TODO: What if database can't be reached?
     // test for existence
-    // var ref = Firebase.database().ref("teams");
-    // console.log(ref)
-    // // ref.orderByChild("teamName").equalTo(payload.teamName).on("child_added", function(snapshot) {
-    // //     console.log(snapshot.key);
-    // // });
-    // ref.once("value")
-    // .then(function(snapshot) {
-    //     console.log(snapshot)
-    //     var pword = snapshot.child("teamPassword").val(); // {first:"Ada",last:"Lovelace"}
-    //     console.log(pword)
-        // var firstName = snapshot.child("name/first").val(); // "Ada"
-        // var lastName = snapshot.child("name").child("last").val(); // "Lovelace"
-        // var age = snapshot.child("age").val(); // null
-    // });
+    var ref = Firebase.database().ref("teams")    
+    ref.orderByChild('teamName').equalTo(payload.teamName).on("value", function(snapshot) {
+      var data = snapshot.val()
+      var key = ''
+      snapshot.forEach((data) => {
+        key = data.key
+      })
+      
 
-    setSubmitting(false)
-    // setErrors({teamName: "Sorry, that's not an existing team"})
-    // setErrors({teamPassword: "Invalid Password"})
-
-    props.history.push('/register/' + payload.teamName)
+      // does team exist?
+      if (data === null) {
+        setErrors({ teamName: "Sorry, that's not an existing team" })
+      } else {
+        var team = data[key]
+        console.log(team)
+        console.log("db: " + team.teamPassword)
+        console.log("form: " + payload.teamPassword)
+        if (team.teamPassword === payload.teamPassword) {
+          // Success! Continue to registration!
+          props.history.push('/register/' + payload.teamName)
+        } else {
+          setErrors({ teamPassword: "Invalid Password" })
+        }
+      }      
+    });
   },
   displayName: 'JoinTeamForm',
 });
