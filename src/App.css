@@ -133,6 +133,53 @@ body {
   padding:20px 0px;
 }
 
+.agenda {
+  background: #FFF;
+  width:80%;  
+  margin:0px auto;
+  color:#000;
+  padding:0px 0px 20px 40px;
+}
+
+.agenda ul {
+  border-left: 1px solid #0074A5;
+  list-style: none;
+  padding:0px 0px 0px 0px;
+  width:90%;
+  margin: 0px auto;
+}
+
+.agenda ul li:before {
+  content: "•";
+  color: #0074A5;
+  padding:0px 20px 0px 0px;
+  margin-left:-13.5px;
+}
+
+.agenda ul li {
+  padding:10px;
+  margin:10px 0px;
+}
+
+.agenda ul li span:before {
+  content:"\A";
+    border-style: solid;
+    border-width: 10px 10px 10px 0px;
+    border-color: transparent #0074A5 transparent transparent;
+    position: absolute;
+    top:9px;
+    left: -10px;
+}
+
+.agenda ul li span {
+  position: relative;
+  z-index: 10;
+  padding:10px;
+  color:#FFF;
+  background: #0074A5;
+  margin-left:-2px;
+}
+
 .flexColumn {
   flex-Direction: column,;
 }
@@ -169,6 +216,33 @@ body {
   }
   .Content {
     padding-top:0px;
+  }
+  .agenda {
+    width:85%;
+    padding:10px;
+  }
+  .agenda ul {
+    list-style: none;
+    border: 0;
+  }
+  .agenda ul li:before {
+    content: "";
+    padding:0px;
+    margin-left:0px;
+  }
+  .agenda ul li span:before {
+    content:"";
+    border-style: 0;
+    border-width: 0px;
+    border-color: transparent #0074A5 transparent transparent;
+    position: relative;
+    top:0px;
+    left: 0px;
+  }
+  .agenda ul li span {
+    background: transparent;
+    font-weight: bold;
+    color:#0074A5;
   }
   .header-wrap {
     width: 90%;
