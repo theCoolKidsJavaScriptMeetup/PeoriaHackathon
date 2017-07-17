@@ -39,7 +39,6 @@ class App extends Component {
           <Route exact path="/registration" component={Registration}/>
           <Route exact path="/faq" component={FAQ}/>
           <Route path='/register/:id' component={RegistrationForm} />
-          <Route path='/registerTeam/join' component={JoinTeamForm} />
           <Route path='/registerTeam/join/:id' component={JoinTeamForm} />
           <Route path='/registerTeam/create' component={CreateTeamForm} />
           <Route path='/registered' component={RegistrationSuccess} />

@@ -17,7 +17,7 @@ export default class Registration extends Component {
         <div>
             <Link to='/register/individual'>Individual</Link>
             <Link to='/registerTeam/create'>Create Team</Link>
-            <Link to='/registerTeam/join'>Join Team</Link>
+            <Link to='/registerTeam/join/join-team'>Join Team</Link>
         </div>
       </div>
     );
