@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import devBrightLogo from '../assets/devBrightLogo.jpg';
+import devBrightLogo from '../assets/devBrightLogo.png';
+import sponsorshipPacket from '../assets/SponsorshipPacket.pdf'
 
 const SponsorCard = ({sponsorName, sponsorImage, sponsorImageAlt}) => {
 		return (
 				<div className="sponsorContainer">
-						<div className="sponsorImage">
-								<img src={sponsorImage} alt={sponsorImageAlt}/>
+						<div >
+								<img className="sponsorImage" src={sponsorImage} alt={sponsorImageAlt}/>
 						</div>
 						<div className="flexColumn">
 								<div className="sponsorBlurb">
@@ -23,14 +24,17 @@ export default class Sponsors extends Component {
 								<h2>Platinum Sponsor</h2>
 								<div className="sponsorsContainer">
 										<SponsorCard
-												sponsorName="DevBright"
 												sponsorImage={devBrightLogo}
 												sponsorImageAlt="DevBright Logo"/>
 								</div>
 								<h2>Gold Sponsors</h2>
+								<p>Spots still available!</p>
 								<div className="sponsorsContainer"></div>
 								<h2>Silver Sponsors</h2>
+								<p>Spots still available!</p>
 								<div className="sponsorsContainer"></div>
+								<h3>Interested in becoming a sponsor?</h3>
+								<a href={sponsorshipPacket} target="_blank" rel="noopener noreferrer" className="sponsorPacket">See here for details.</a>
 						</div>
 				);
 		}
