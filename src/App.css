@@ -13,6 +13,12 @@ body {
   flex-direction: row;
 }
 
+.stacked.button-group {
+  flex-direction: column;
+  width:80%;
+  margin: 0px auto;
+}
+
 .button {
   display: block;
   background-color: #0074A5;
@@ -110,6 +116,11 @@ body {
   font-weight: 300;
   font-size: 3em;
   text-align: center;
+}
+
+.Content h3 {
+  text-align: center;
+  font-size: 1.8em;
 }
 
 .intro_message {
