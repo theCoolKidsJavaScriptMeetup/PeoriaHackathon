@@ -19,7 +19,7 @@ export default class Main extends Component {
 		    	</div>
 
 		    	<div className="agenda">
-		    		<h2 align="center">Agenda</h2>
+		    		<h2>Agenda</h2>
 		    		<h3>Friday Night Meet @ ___ (local watering hole)</h3>
 			    	<ul>
 			    		<li><span>6-6:30 PM: Check-in, pick up a name tag, and grab a drink (if you wish)!</span></li>
