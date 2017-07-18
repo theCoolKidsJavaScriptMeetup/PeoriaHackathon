@@ -59,7 +59,7 @@ const formikEnhancer = Formik({
     var updates = {};
     updates['/users/' + newUserKey] = userData;
 
-    var res =  Firebase.database().ref().update(updates)
+    Firebase.database().ref().update(updates)
       .then(props.history.push('/registered'))
       .catch(err => console.log('err', err));
   },

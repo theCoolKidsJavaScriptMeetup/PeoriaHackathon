@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../App.css';
-import devBrightLogo from '../devBrightLogo.jpg';
+import devBrightLogo from '../assets/devBrightLogo.jpg';
 
 const SponsorCard = ({sponsorName, sponsorTitle, sponsorImage})=> {
 	return (
 		<div className="sponsorContainer">
 			<div className="sponsorImage">
-				<img src={devBrightLogo} />
+				<img src={devBrightLogo} alt="DevBright Logo" />
 			</div>
 			<div className="flexColumn">
 				<div className="sponsorBlurb">

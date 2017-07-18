@@ -54,7 +54,7 @@ body {
 }
 
 .color-cover {
-  background: url(skyline.jpg) no-repeat top center;
+  background: url("./assets/skyline.jpg") no-repeat top center;
   background-size: 100%;
 }
 

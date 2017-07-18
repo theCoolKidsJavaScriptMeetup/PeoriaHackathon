@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-import logo from '../logo.png';
-import '../App.css';
+import logo from '../assets/logo.png';
 import '../Navigation.css';
 
 export default class Navigation extends Component {

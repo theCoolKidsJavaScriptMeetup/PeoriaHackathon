@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import { Formik } from 'formik';
-import Yup from 'yup';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-import '../App.css';
+import { Link } from 'react-router-dom'
 import '../Registration.css'
 
 export default class Registration extends Component {

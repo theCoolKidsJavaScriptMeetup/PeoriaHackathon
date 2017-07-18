@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 
-type SoshalTextProps = {
-  href: String,
-  style: Object,
-  children?: String
-}
-
 export default class Button extends Component {
     render() {
         return (

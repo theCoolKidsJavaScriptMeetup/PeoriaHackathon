@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-
 import Header from './Header.js';
-
-
-import logo from '../logo.svg';
-import '../App.css';
 
 export default class Main extends Component {
   render() {
