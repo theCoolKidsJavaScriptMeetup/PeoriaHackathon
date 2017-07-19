@@ -15,11 +15,13 @@
 
 .FaqQuestion {
   border-radius: 3px;
-  background: #e4e4e4;
+  background: #ffffff;
   color: #000;
   font-size: 18px;
   font-weight: 700;
-  padding:10px;
+  padding: 10px;
+  margin: 0px 25px;
+  border-bottom: 2px solid #fcb315;
 }
 
 .FaqAnswer {
