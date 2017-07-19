@@ -19,6 +19,10 @@ body {
   margin: 0px auto;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .button {
   display: block;
   background-color: #0074A5;

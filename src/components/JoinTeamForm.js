@@ -8,15 +8,17 @@ import ReactFireMixin from 'reactfire'
 const JoinTeamForm = ({ match, history }) => {
     return (<div className='Content'>
         <h2>Join A Team</h2>
-        {
-          
-          (match.params.id === "new-team") ?
-            <div>
-              <p>Success! You have created your team.</p>
-              <p>Please enter your team name and password.</p>
-            </div>
-            : null
-        }
+        <div className="center-text">
+          {
+            
+            (match.params.id === "new-team") ?
+              <div>
+                <p>Success! You have created your team.</p>
+                <p>Please enter your team name and password.</p>
+              </div>
+              : null
+          }
+        </div>
         <div className="register_form">
             <TeamForm 
                 team={{ name: '', password: '' }}
@@ -55,7 +57,6 @@ const formikTeamEnhancer = Formik({
         key = data.key
       })
       
-
       // does team exist?
       if (data === null) {
         setErrors({ teamName: "Sorry, that's not an existing team" })
