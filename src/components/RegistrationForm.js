@@ -20,7 +20,7 @@ import codeOfConductDoc from '../assets/CodeofConductandHarassmentPolicy.pdf'
                   ((this.props.match.params.id === "individual") ? 
                       <div>
                         <h3>You are registering as an Individual</h3>
-                        <h4>Trying to join a team that already exists?Go <Link className="whiteLink" to="/registerTeam/join/join-team" >here</Link>.</h4>
+                        <h4>Trying to join a team that already exists? Go <Link className="whiteLink" to="/registerTeam/join/join-team" >here</Link>.</h4>
                       </div> :
                       <h3>You are registering with Team {this.props.match.params.id}</h3>) 
               }
