@@ -15,7 +15,7 @@ body {
 
 .stacked.button-group {
   flex-direction: column;
-  width:80%;
+  width:50%;
   margin: 0px auto;
 }
 
@@ -204,6 +204,16 @@ a.button:active {
   margin-left:-2px;
 }
 
+.Footer {
+  width:100px;
+  margin: 50px auto;
+}
+
+.Footer img {
+  width: 100%;
+  height:auto;
+}
+
 .flexColumn {
   flex-direction: column,;
 }
@@ -288,6 +298,9 @@ a.whiteLink:active {
   }
   .button-group {
     flex-direction: column;
+  }
+  .stacked.button-group {
+    width:90%;
   }
 }
 

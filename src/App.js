@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Firebase from 'firebase'
 
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import Main from './components/Main';
 import Sponsors from './components/Sponsors';
 import Registration from './components/Registration';
@@ -42,6 +43,8 @@ class App extends Component {
           <Route path='/registerTeam/join/:id' component={JoinTeamForm} />
           <Route path='/registerTeam/create' component={CreateTeamForm} />
           <Route path='/registered' component={RegistrationSuccess} />
+          
+          <Footer />
         </div>
       </Router>
     );
