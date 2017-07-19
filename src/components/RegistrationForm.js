@@ -168,7 +168,7 @@ const MyForm = ({
         {errors.termsOfUse}
       </div>}
  
-    <button type="submit" className="button">Submit</button>
+    <button type="submit" className="button">Register</button>
   </form>;
 
 const Form = formikEnhancer(MyForm);

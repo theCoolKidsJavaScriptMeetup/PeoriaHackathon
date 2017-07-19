@@ -125,7 +125,7 @@ const TeamFormikForm = ({
         {errors.confirmTeamPassword}
       </div>
     }
-    <button type="submit" className="button">Submit</button>
+    <button type="submit" className="button">Create Team</button>
   </form>;
 
 const TeamForm = formikTeamEnhancer(TeamFormikForm);

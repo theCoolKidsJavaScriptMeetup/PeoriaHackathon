@@ -1,4 +1,12 @@
 {
   "rules": {
+    "teams" : {
+      ".read": true,
+      ".write": true
+    },
+    "users" : {
+      ".read": true,
+      ".write": true
+    }
   }
 }
