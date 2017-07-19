@@ -54,7 +54,7 @@ const formikEnhancer = Formik({
     lastName: Yup.string()
       .required('Last name is required!'),
     termsOfUse: Yup.boolean()
-      .required('Please accept the Terms of Use and Code of Conduct.')
+      .required('Please accept the Participation Agreement and Code of Conduct.')
   }),
   mapPropsToValues: props => ({ 
       email: props.user.email,
@@ -69,7 +69,7 @@ const formikEnhancer = Formik({
     if(userData.termsOfUse) {
 
     } else {
-       setErrors({ termsOfUse: "Please accept the Terms of Use and Code of Conduct." })
+       setErrors({ termsOfUse: "Please accept the Participation Agreement and Code of Conduct." })
        return
     }
     console.log("submitting to firebase dawg")
@@ -163,7 +163,7 @@ const MyForm = ({
       className=""
       onBlur={handleBlur}
       onChange={handleChange}
-      value={values.termsOfUse}/>I accept the <a href={termsOfUseDoc} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Terms of Use</a> and <a href={codeOfConductDoc} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Code of Conduct</a>.</label>
+      value={values.termsOfUse}/>I accept the <a href={termsOfUseDoc} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Participation Agreement</a> and <a href={codeOfConductDoc} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Code of Conduct</a>.</label>
       {errors.termsOfUse &&
       touched.termsOfUse &&
       <div className="input-feedback">

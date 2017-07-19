@@ -26,7 +26,7 @@ export default class FAQ extends Component {
                     <FAQCard title="Will there be food?" answer="All meals, snacks, and drinks will be provided during Saturday's event."/>
                     <FAQCard title="Who do I contact with questions before the event?" answer={<div><div>Please contact event organizer <a className="faq_link" href="mailto:pkobak@peoriagov.org">Peter Kobak</a> with any questions prior to the hackathon.</div></div>}/>
                     <FAQCard title="Will you have hardware?" answer="This will be a BYOD (Bring Your Own Device) hackathon. No hardware will be provided."/>
-                    <FAQCard title="What is expected of participants?" answer="Registered participants have agreed to the Terms of Use (Link to Terms of Use) and are expected to follow the Peoria Civic Hackathon Code of Conduct (Link to Code of Conduct)."/>
+                    <FAQCard title="What is expected of participants?" answer="Registered participants have agreed to the Participation Agreement (Link to Participation Agreement) and are expected to follow the Peoria Civic Hackathon Code of Conduct (Link to Code of Conduct)."/>
                 </div>
             </div>
         );
