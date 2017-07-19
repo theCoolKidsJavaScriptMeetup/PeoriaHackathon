@@ -97,7 +97,7 @@ const TeamFormikForm = ({
       onChange={handleChange}
       onBlur={handleBlur}
       className={
-        errors.teamName && touched.teamName ? 'text-input error' : 'text-input'
+        errors.teamName && touched.teamName ? 'text-input error textInput' : 'text-input textInput'
       }
     />
     {errors.teamName &&
@@ -117,7 +117,7 @@ const TeamFormikForm = ({
       onChange={handleChange}
       onBlur={handleBlur}
       className={
-        errors.teamPassword && touched.teamPassword ? 'text-input error' : 'text-input'
+        errors.teamPassword && touched.teamPassword ? 'text-input error textInput' : 'text-input textInput'
       }
     />
     {errors.teamPassword &&

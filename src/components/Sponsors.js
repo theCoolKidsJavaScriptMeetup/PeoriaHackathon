@@ -34,7 +34,7 @@ export default class Sponsors extends Component {
 								<p>Spots still available!</p>
 								<div className="sponsorsContainer"></div>
 								<h3>Interested in becoming a sponsor?</h3>
-								<a href={sponsorshipPacket} target="_blank" rel="noopener noreferrer" className="sponsorPacket">See here for details.</a>
+								<a href={sponsorshipPacket} target="_blank" rel="noopener noreferrer" className="whiteLink">See here for details.</a>
 						</div>
 				);
 		}

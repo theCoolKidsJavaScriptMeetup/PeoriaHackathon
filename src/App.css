@@ -30,6 +30,15 @@ body {
   text-align: center;
 }
 
+a.button,
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active {
+  text-decoration: none;
+  color: #0074A5;
+}
+
 .button.whitebutton {
     background-color: #FFF;
     border:1px solid #fff;
@@ -219,11 +228,11 @@ body {
   padding: 18px;
 }
 
-a.sponsorPacket,
-a.sponsorPacket:link,
-a.sponsorPacket:visited,
-a.sponsorPacket:hover,
-a.sponsorPacket:active {
+a.whiteLink,
+a.whiteLink:link,
+a.whiteLink:visited,
+a.whiteLink:hover,
+a.whiteLink:active {
   color: #fff;
   text-decoration: underline;
 }
@@ -276,4 +285,12 @@ a.sponsorPacket:active {
   .button-group {
     flex-direction: column;
   }
+}
+
+a.faq_link,
+a.faq_link:link,
+a.faq_link:visited,
+a.faq_link:hover,
+a.faq_link:active {
+  color: #000;
 }

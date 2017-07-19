@@ -18,7 +18,7 @@
   display: block;
 }
 
-.register_form form input {
+.register_form form .textInput {
   display: block;
   padding:10px 0px 10px 20px;
   width:97%;
@@ -52,3 +52,12 @@
   }
 
 }  
+
+a.register_form_checkboxLabel,
+a.register_form_checkboxLabel:link,
+a.register_form_checkboxLabel:visited,
+a.register_form_checkboxLabel:hover,
+a.register_form_checkboxLabel:active {
+  color: #0074A5;
+  text-decoration: underline;
+}

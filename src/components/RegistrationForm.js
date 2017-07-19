@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Formik } from 'formik';
 import Yup from 'yup';
 import Firebase from 'firebase'
@@ -15,7 +16,10 @@ import ReactFireMixin from 'reactfire'
             <h2>Almost There!</h2>
             {
                 (this.props.match.params.id === "individual") ? 
-                    <h3>You are registering as an Individual</h3> :
+                    <div>
+                      <h3>You are registering as an Individual</h3>
+                      <h4>Trying to Join a Team? Go <Link className="whiteLink" to="/registerTeam/join/join-team" >here</Link>.</h4>
+                    </div> :
                     <h3>You are registering with Team {this.props.match.params.id}</h3> 
             }
         <div className="register_form">
@@ -24,7 +28,8 @@ import ReactFireMixin from 'reactfire'
                 email: '',
                 firstName: '',
                 lastName: '',
-                teamName: this.props.match.params.id
+                teamName: this.props.match.params.id,
+                termsOfUse: false
               }}
               history={this.props.history}
              /> 
@@ -44,16 +49,28 @@ const formikEnhancer = Formik({
     firstName: Yup.string()
       .required('First name is required!'),
     lastName: Yup.string()
-      .required('Last name is required!')
+      .required('Last name is required!'),
+    termsOfUse: Yup.boolean()
+      .required('Please accept the Terms of Use and Code of Conduct.')
   }),
   mapPropsToValues: props => ({ 
       email: props.user.email,
       firstName: props.user.firstName,
       lastName: props.user.lastName,
-      team: props.user.teamName
+      team: props.user.teamName,
+      termsOfUse: props.user.termsOfUse
   }),
-  handleSubmit: (payload, {props}) => {
+  handleSubmit: (payload, {props, setErrors, setSubmitting}) => {
     var userData = payload;
+    console.log(userData.termsOfUse)
+    if(userData.termsOfUse) {
+
+    } else {
+       setErrors({ termsOfUse: "Please accept the Terms of Use and Code of Conduct." })
+       return
+    }
+    console.log("submitting to firebase dawg")
+    delete userData["termsOfUse"]
     var newUserKey = Firebase.database().ref().child('users').push().key;
 
     var updates = {};
@@ -87,7 +104,7 @@ const MyForm = ({
       onChange={handleChange}
       onBlur={handleBlur}
       className={
-        errors.firstName && touched.firstName ? 'text-input error' : 'text-input'
+        errors.firstName && touched.firstName ? 'text-input error textInput' : 'text-input textInput'
       }
     />
     {errors.firstName &&
@@ -107,7 +124,7 @@ const MyForm = ({
       onChange={handleChange}
       onBlur={handleBlur}
       className={
-        errors.lastName && touched.lastName ? 'text-input error' : 'text-input'
+        errors.lastName && touched.lastName ? 'text-input error textInput' : 'text-input textInput'
       }
     />
     {errors.lastName &&
@@ -127,7 +144,7 @@ const MyForm = ({
       onChange={handleChange}
       onBlur={handleBlur}
       className={
-        errors.email && touched.email ? 'text-input error' : 'text-input'
+        errors.email && touched.email ? 'text-input error textInput' : 'text-input textInput'
       }
     />
     {errors.email &&
@@ -135,6 +152,21 @@ const MyForm = ({
       <div className="input-feedback">
         {errors.email}
       </div>}
+   
+    
+      <label><input 
+      id="termsOfUse" 
+      type="checkbox"
+      className=""
+      onBlur={handleBlur}
+      onChange={handleChange}
+      value={values.termsOfUse}/>I accept the <a href={null} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Terms of Use</a> and <a href={null} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Code of Conduct</a>.</label>
+      {errors.termsOfUse &&
+      touched.termsOfUse &&
+      <div className="input-feedback">
+        {errors.termsOfUse}
+      </div>}
+ 
     <button type="submit">Submit</button>
   </form>;
 
