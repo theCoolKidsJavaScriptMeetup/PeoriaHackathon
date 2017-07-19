@@ -70,7 +70,7 @@ const TeamFormikForm = ({
     </label>
     <input
       id="teamName"
-      placeholder="Team name"
+      placeholder="Team Name"
       type="text"
       value={values.teamName}
       onChange={handleChange}

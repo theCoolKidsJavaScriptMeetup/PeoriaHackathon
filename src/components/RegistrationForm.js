@@ -138,7 +138,7 @@ const MyForm = ({
     </label>
     <input
       id="email"
-      placeholder="Enter your email"
+      placeholder="Email"
       type="text"
       value={values.email}
       onChange={handleChange}
