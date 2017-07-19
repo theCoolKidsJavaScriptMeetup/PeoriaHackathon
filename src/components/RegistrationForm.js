@@ -5,6 +5,8 @@ import Yup from 'yup';
 import Firebase from 'firebase'
 import ReactMixin from 'react-mixin'
 import ReactFireMixin from 'reactfire'
+import termsOfUseDoc from '../assets/ParticipationAgreement.pdf'
+import codeOfConductDoc from '../assets/CodeofConductandHarassmentPolicy.pdf'
 
  export default class RegistrationForm extends Component {
     render() {
@@ -12,6 +14,16 @@ import ReactFireMixin from 'reactfire'
         return ( 
         <div className='Content'>
             <h2>Almost There!</h2>
+<<<<<<< HEAD
+            {
+                (this.props.match.params.id === "individual") ? 
+                    <div>
+                      <h3>You are registering as an Individual</h3>
+                      <h4>Trying to join a team that already exists? Go <Link className="whiteLink" to="/registerTeam/join/join-team" >here</Link>.</h4>
+                    </div> :
+                    <h3>You are registering with Team {this.props.match.params.id}</h3> 
+            }
+=======
             <div className="center-text">
               {
                 
@@ -23,6 +35,7 @@ import ReactFireMixin from 'reactfire'
                       <h3>You are registering with Team {this.props.match.params.id}</h3>) 
               }
             </div>
+>>>>>>> 3e199ec782ebfa05fddbc15b7c03016d13f88fe4
         <div className="register_form">
             <Form 
               user={{ 
@@ -161,7 +174,7 @@ const MyForm = ({
       className=""
       onBlur={handleBlur}
       onChange={handleChange}
-      value={values.termsOfUse}/>I accept the <a href={null} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Terms of Use</a> and <a href={null} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Code of Conduct</a>.</label>
+      value={values.termsOfUse}/>I accept the <a href={termsOfUseDoc} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Terms of Use</a> and <a href={codeOfConductDoc} target="_blank" rel="noopener noreferrer" className="register_form_checkboxLabel">Code of Conduct</a>.</label>
       {errors.termsOfUse &&
       touched.termsOfUse &&
       <div className="input-feedback">
