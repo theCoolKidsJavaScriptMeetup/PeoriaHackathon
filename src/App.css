@@ -13,6 +13,16 @@ body {
   flex-direction: row;
 }
 
+.stacked.button-group {
+  flex-direction: column;
+  width:80%;
+  margin: 0px auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
 .button {
   display: block;
   background-color: #0074A5;
@@ -24,9 +34,18 @@ body {
   text-align: center;
 }
 
+a.button,
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active {
+  text-decoration: none;
+  color: #0074A5;
+}
+
 .button.whitebutton {
     background-color: #FFF;
-    border:1px solid #0074A5;
+    border:1px solid #fff;
 }
 
 .button:hover {
@@ -54,7 +73,7 @@ body {
 }
 
 .color-cover {
-  background: url(skyline.jpg) no-repeat top center;
+  background: url("./assets/skyline.jpg") no-repeat top center;
   background-size: 100%;
 }
 
@@ -112,6 +131,11 @@ body {
   text-align: center;
 }
 
+.Content h3 {
+  text-align: center;
+  font-size: 1.8em;
+}
+
 .intro_message {
   width:70%;
   margin:0px auto;
@@ -133,8 +157,55 @@ body {
   padding:20px 0px;
 }
 
+.agenda {
+  background: #FFF;
+  width:80%;  
+  margin:0px auto;
+  color:#000;
+  padding:0px 0px 20px 40px;
+}
+
+.agenda ul {
+  border-left: 1px solid #0074A5;
+  list-style: none;
+  padding:0px 0px 0px 0px;
+  width:90%;
+  margin: 0px auto;
+}
+
+.agenda ul li:before {
+  content: "•";
+  color: #0074A5;
+  padding:0px 20px 0px 0px;
+  margin-left:-13.5px;
+}
+
+.agenda ul li {
+  padding:10px;
+  margin:10px 0px;
+}
+
+.agenda ul li span:before {
+  content:"\A";
+    border-style: solid;
+    border-width: 10px 10px 10px 0px;
+    border-color: transparent #0074A5 transparent transparent;
+    position: absolute;
+    top:9px;
+    left: -10px;
+}
+
+.agenda ul li span {
+  position: relative;
+  z-index: 10;
+  padding:10px;
+  color:#FFF;
+  background: #0074A5;
+  margin-left:-2px;
+}
+
 .flexColumn {
-  flex-Direction: column,;
+  flex-direction: column,;
 }
 
 .sponsorBlurb {
@@ -146,18 +217,30 @@ body {
 }
 
 .sponsorImage {
-  width: 500px;
-  height: 400px;
+  max-width: 500px;
+  max-height: 400px;
+  margin: auto;
+  display: block;
 }
 
 .sponsorContainer {
   display: flex;
-  flexdDirection: row;
+  flex-direction: row;
   background: #eee;
   width: 770px;
   margin: 30px auto;
   padding: 18px;
 }
+
+a.whiteLink,
+a.whiteLink:link,
+a.whiteLink:visited,
+a.whiteLink:hover,
+a.whiteLink:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
 
 .blackText {
   color: #000;
@@ -167,13 +250,51 @@ body {
   .App-header {
     padding: 70px 0px;
   }
+  .Content {
+    padding-top:0px;
+  }
+  .agenda {
+    width:85%;
+    padding:10px;
+  }
+  .agenda ul {
+    list-style: none;
+    border: 0;
+  }
+  .agenda ul li:before {
+    content: "";
+    padding:0px;
+    margin-left:0px;
+  }
+  .agenda ul li span:before {
+    content:"";
+    border-style: 0;
+    border-width: 0px;
+    border-color: transparent #0074A5 transparent transparent;
+    position: relative;
+    top:0px;
+    left: 0px;
+  }
+  .agenda ul li span {
+    background: transparent;
+    font-weight: bold;
+    color:#0074A5;
+  }
   .header-wrap {
     width: 90%;
   }
   .header-content h1 {
-    font-size: 3em;
+    font-size: 2.6em;
   }
   .button-group {
     flex-direction: column;
   }
+}
+
+a.faq_link,
+a.faq_link:link,
+a.faq_link:visited,
+a.faq_link:hover,
+a.faq_link:active {
+  color: #000;
 }

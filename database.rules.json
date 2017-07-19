@@ -1,6 +1,12 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
+    "teams" : {
+      ".read": true,
+      ".write": true
+    },
+    "users" : {
+      ".read": true,
+      ".write": true
+    }
   }
 }

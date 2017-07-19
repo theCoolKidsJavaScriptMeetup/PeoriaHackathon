@@ -1,20 +1,20 @@
 .faq-group {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap:wrap;
+   column-width: 20%;
+   column-count: 3;
+   column-gap: 10px;
+   width:90%;
+   margin:0px auto;
 }
 
 .FaqCard {
   background: #FFF;
   color:#000;
-  margin:10px;
-  flex-basis: 31%;
-  box-shadow: 1px 1px 20px rgba(0,0,0,0.5);
+  margin:10px;  break-inside: avoid-column;
+  border-radius: 3px;
 }
 
 .FaqQuestion {
+  border-radius: 3px;
   background: #e4e4e4;
   color: #000;
   font-size: 18px;
@@ -24,4 +24,15 @@
 
 .FaqAnswer {
   padding:10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .faq-group {
+   column-width: 100%;
+   column-count: 1;
+   column-gap: 0px;
+   width:90%;
+   margin:0px auto;
+}
+
 }

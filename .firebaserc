@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "default": "peoria-hackathon-8b9e7"
+  }
+}
