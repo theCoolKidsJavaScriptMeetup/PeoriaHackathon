@@ -303,11 +303,3 @@ a.whiteLink:active {
     width:90%;
   }
 }
-
-a.faq_link,
-a.faq_link:link,
-a.faq_link:visited,
-a.faq_link:hover,
-a.faq_link:active {
-  color: #000;
-}
