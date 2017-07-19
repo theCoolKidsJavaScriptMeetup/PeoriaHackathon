@@ -20,7 +20,7 @@ const SponsorCard = ({sponsorName, sponsorImage, sponsorImageAlt}) => {
 export default class Sponsors extends Component {
 		render() {
 				return (
-						<div className="Content">
+						<div className="Content center-text">
 								<h2>Platinum Sponsor</h2>
 								<div className="sponsorsContainer">
 										<SponsorCard

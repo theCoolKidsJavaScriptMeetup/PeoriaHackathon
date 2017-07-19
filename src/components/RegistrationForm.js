@@ -8,14 +8,13 @@ import ReactFireMixin from 'reactfire'
 import termsOfUseDoc from '../assets/ParticipationAgreement.pdf'
 import codeOfConductDoc from '../assets/CodeofConductandHarassmentPolicy.pdf'
 
-// const ref = new Firebase('https://peoria-hackathon-8b9e7.firebaseio.com/')
-
  export default class RegistrationForm extends Component {
     render() {
         console.log(this.props)
         return ( 
         <div className='Content'>
             <h2>Almost There!</h2>
+<<<<<<< HEAD
             {
                 (this.props.match.params.id === "individual") ? 
                     <div>
@@ -24,6 +23,19 @@ import codeOfConductDoc from '../assets/CodeofConductandHarassmentPolicy.pdf'
                     </div> :
                     <h3>You are registering with Team {this.props.match.params.id}</h3> 
             }
+=======
+            <div className="center-text">
+              {
+                
+                  ((this.props.match.params.id === "individual") ? 
+                      <div>
+                        <h3>You are registering as an Individual</h3>
+                        <h4>Trying to Join a Team? Go <Link className="whiteLink" to="/registerTeam/join/join-team" >here</Link>.</h4>
+                      </div> :
+                      <h3>You are registering with Team {this.props.match.params.id}</h3>) 
+              }
+            </div>
+>>>>>>> 3e199ec782ebfa05fddbc15b7c03016d13f88fe4
         <div className="register_form">
             <Form 
               user={{ 
