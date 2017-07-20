@@ -7,16 +7,11 @@ import sponsorshipPacket from '../assets/SponsorshipPacket.pdf'
 
 const SponsorCard = ({sponsorName, sponsorImage, sponsorImageAlt}) => {
 		return (
-				<div className="sponsorContainer">
-						<div>
-								<img className="sponsorImage" src={sponsorImage} alt={sponsorImageAlt}/>
-						</div>
-						 {/* <div className="flexColumn">
-								<div className="sponsorBlurb">
-										<h3 className="blackText">{sponsorName}</h3>
-								</div>
-						</div>  */}
+			<div className="sponsorContainer">
+				<div>
+					<img className="sponsorImage" src={sponsorImage} alt={sponsorImageAlt}/>
 				</div>
+			</div>
 		);
 }
 
@@ -25,11 +20,9 @@ export default class Sponsors extends Component {
 				return (
 						<div className="Content center-text">
 								<h2>Platinum Sponsor</h2>
-								<div className="sponsorsContainer">
-										<SponsorCard
-												sponsorImage={devBrightLogo}
-												sponsorImageAlt="DevBright Logo"/>
-								</div>
+								<SponsorCard
+									sponsorImage={devBrightLogo}
+									sponsorImageAlt="DevBright Logo"/>
 								<h2>Gold Sponsors</h2>
 								<p>Spots still available!</p>
 								<div className="sponsorsContainer"></div>

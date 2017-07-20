@@ -2,11 +2,15 @@
   "rules": {
     "teams" : {
       ".read": true,
-      ".write": "!data.exists() || !newData.exists()",
+        "$team" : {
+          ".write": "!data.exists()"
+        }
     },
     "users" : {
       ".read": true,
-      ".write": true,
+        "$user" : {
+            ".write": "!data.child('email').exists()"
+        }
     }
   }
 }

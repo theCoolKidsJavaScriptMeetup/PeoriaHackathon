@@ -72,16 +72,20 @@ const formikEnhancer = Formik({
        setErrors({ termsOfUse: "Please accept the Participation Agreement and Code of Conduct." })
        return
     }
-    console.log("submitting to firebase dawg")
     delete userData["termsOfUse"]
     var newUserKey = Firebase.database().ref().child('users').push().key;
+    var newUser = {};
+    newUser['/users/' + newUserKey] = userData;
 
-    var updates = {};
-    updates['/users/' + newUserKey] = userData;
-
-    Firebase.database().ref().update(updates)
-      .then(props.history.push('/registered'))
-      .catch(err => console.log('err', err));
+    Firebase.database().ref().update(newUser)
+      .then(()=> {
+        setSubmitting(false)
+        props.history.push('/registered')})
+      .catch( (err) => {
+          setSubmitting(false)
+          console.log('err', err)
+          setErrors({email: "Sorry, there is already a user with that email."})
+      });
   },
   displayName: 'RegistrationForm',
 });
