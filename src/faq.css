@@ -1,7 +1,7 @@
 .FaqCard a,
 .FaqCard a:link,
 .FaqCard a:visited,
-.FaqCarda:active {
+.FaqCard a:active {
   text-decoration: none;
   color: #0074A5;
 }
