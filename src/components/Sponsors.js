@@ -4,6 +4,7 @@ import rclLogo from '../assets/RCL_WHITE.png';
 import civicCenterlogo from '../assets/CivicCenterLogo.png';
 import artsPartnerslogo from '../assets/Arts-Partners-Logo.png';
 import goodenergylogo from '../assets/GoodEnergyLogo.png';
+import CoPlogo from '../assets/CoP-logo.png';
 import sponsorshipPacket from '../assets/SponsorshipPacket.pdf'
 
 const SponsorCard = ({sponsorName, sponsorImage, sponsorImageAlt}) => {
@@ -37,6 +38,10 @@ export default class Sponsors extends Component {
 								<h3>In Partnership With Ignite Peoria and...</h3>
 								<div className="partnersContainer">
 										<SponsorCard
+												sponsorImage={CoPlogo}
+												sponsorImageAlt="City of Peoria Logo"/>
+												
+										<SponsorCard
 												sponsorImage={civicCenterlogo}
 												sponsorImageAlt="Civic Center Logo"/>
 								
@@ -46,7 +51,7 @@ export default class Sponsors extends Component {
 								
 										<SponsorCard
 												sponsorImage={artsPartnerslogo}
-												sponsorImageAlt="Arts Partners"/>
+												sponsorImageAlt="Arts Partners Logo"/>
 								</div>
 								<div className="interestedSponsor">Interested in becoming a sponsor of the Peoria Civic Hackathon? <a href={sponsorshipPacket} target="_blank" rel="noopener noreferrer" className="whiteLink">See here for details.</a></div>
 						</div>
