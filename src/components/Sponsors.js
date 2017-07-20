@@ -11,11 +11,11 @@ const SponsorCard = ({sponsorName, sponsorImage, sponsorImageAlt}) => {
 						<div>
 								<img className="sponsorImage" src={sponsorImage} alt={sponsorImageAlt}/>
 						</div>
-						 <div className="flexColumn">
+						 {/* <div className="flexColumn">
 								<div className="sponsorBlurb">
 										<h3 className="blackText">{sponsorName}</h3>
 								</div>
-						</div> 
+						</div>  */}
 				</div>
 		);
 }
