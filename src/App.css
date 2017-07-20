@@ -136,6 +136,12 @@ a.button:active {
   font-size: 1.8em;
 }
 
+.interestedSponsor {
+  text-align: center;
+  font-size: 1em;
+  margin-top:100px;
+}
+
 .intro_message {
   width:70%;
   margin:0px auto;
@@ -236,7 +242,6 @@ a.button:active {
 .sponsorContainer {
   display: flex;
   flex-direction: row;
-  background: #eee;
   width: 770px;
   margin: 30px auto;
   padding: 18px;
