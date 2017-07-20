@@ -31,7 +31,11 @@ import codeOfConductDoc from '../assets/CodeofConductandHarassmentPolicy.pdf'
                 firstName: '',
                 lastName: '',
                 teamName: this.props.match.params.id,
-                termsOfUse: false
+                termsOfUse: false,
+                meetup: false,
+                placeOnTeam: false,
+                skill: 'Developer',
+                tshirt_size: 'S'
               }}
               history={this.props.history}
              /> 
@@ -62,7 +66,9 @@ const formikEnhancer = Formik({
       team: props.user.teamName,
       termsOfUse: props.user.termsOfUse,
       meetup: props.user.meetup,
-      placeOnTeam: props.user.placeOnTeam
+      placeOnTeam: props.user.placeOnTeam,
+      skill: props.user.skill,
+      tshirt_size: props.user.tshirt_size
   }),
   handleSubmit: (payload, {props, setErrors, setSubmitting}) => {
     var userData = payload;
@@ -107,7 +113,7 @@ const MyForm = ({
     </label>
     <input
       id="firstName"
-      placeholder="First name"
+      placeholder="First Name"
       type="text"
       value={values.firstName}
       onChange={handleChange}
@@ -127,7 +133,7 @@ const MyForm = ({
     </label>
     <input
       id="lastName"
-      placeholder="Last name"
+      placeholder="Last Name"
       type="text"
       value={values.lastName}
       onChange={handleChange}
@@ -195,13 +201,32 @@ const MyForm = ({
       className=""
       onBlur={handleBlur}
       onChange={handleChange}
-      value={values.placeOnTeam}/>I am interested in attending Friday's meetup.</label>
+      value={values.placeOnTeam}/>I am open to being placed on a team.</label>
       {errors.placeOnTeam &&
       touched.placeOnTeam &&
       <div className="input-feedback">
         {errors.placeOnTeam}
       </div>}
- 
+      
+      <label>I am a..
+        <select id="skill" value={values.skill} onChange={handleChange}>
+          <option value="Developer">Developer</option>
+          <option value="Designer">Designer</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+
+      <label>T-shirt size
+        <select id="tshirt_size" value={values.tshirt_size} onChange={handleChange}>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+      </label>
+
     <button type="submit" className="button">Register</button>
   </form>;
 
