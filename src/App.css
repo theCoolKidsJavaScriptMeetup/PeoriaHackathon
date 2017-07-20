@@ -219,6 +219,14 @@ a.button:active {
 .Footer img {
   width: 100%;
   height:auto;
+  margin-top:10px;
+}
+
+.footerText {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .flexColumn {
@@ -234,16 +242,20 @@ a.button:active {
 }
 
 .sponsorImage {
-  max-width: 500px;
-  max-height: 400px;
+  width:100%;
+  height:auto;
   margin: auto;
   display: block;
 }
 
 .sponsorContainer {
-  width: 770px;
+  width: 30%;
   margin: 30px auto;
   padding: 18px;
+}
+.partnersContainer {
+  width: 45%;
+  margin: 30px auto;
 }
 
 a.whiteLink,
