@@ -2,11 +2,11 @@
   "rules": {
     "teams" : {
       ".read": true,
-      ".write": true
+      ".write": "!data.exists() || !newData.exists()",
     },
     "users" : {
       ".read": true,
-      ".write": true
+      ".write": true,
     }
   }
 }

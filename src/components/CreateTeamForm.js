@@ -41,15 +41,16 @@ const formikTeamEnhancer = Formik({
       setErrors({confirmTeamPassword: "Error: Passwords do not match."})
     } else {
       var teamData = payload;
-      delete teamData["confirmTeamPassword"]
-      var newTeamKey = Firebase.database().ref().child('teams').push().key;
-
-      var updates = {};
-      updates['/teams/' + newTeamKey] = teamData;
-
-      Firebase.database().ref().update(updates)
-        .then(props.history.push('/registerTeam/join/new-team'))
-        .catch(err => console.log('err', err));
+      var res = Firebase.database().ref('/teams/' + teamData.teamName).set({teamPassword: teamData.teamPassword, teamName: teamData.teamName})
+        .then((res) => {
+          if(res) {
+            props.history.push('/registerTeam/join/new-team')
+          }
+        })
+        .catch(err => {
+          console.log('err', err)
+          setErrors({teamName: "Error: Sorry. That team name is already taken."})
+        });
       }
   },
   displayName: 'CreateTeamForm',
