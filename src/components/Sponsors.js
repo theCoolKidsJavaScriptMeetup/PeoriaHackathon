@@ -3,6 +3,7 @@ import devBrightLogo from '../assets/DevBright_Logo.png';
 import rclLogo from '../assets/RCL_WHITE.png';
 import civicCenterlogo from '../assets/CivicCenterLogo.png';
 import artsPartnerslogo from '../assets/Arts-Partners-Logo.png';
+import goodenergylogo from '../assets/GoodEnergyLogo.png';
 import sponsorshipPacket from '../assets/SponsorshipPacket.pdf'
 
 const SponsorCard = ({sponsorName, sponsorImage, sponsorImageAlt}) => {
@@ -24,12 +25,16 @@ export default class Sponsors extends Component {
 									sponsorImage={devBrightLogo}
 									sponsorImageAlt="DevBright Logo"/>
 								<h2>Gold Sponsors</h2>
-								<p>Spots still available!</p>
+								<div className="sponsorsContainer">
+										<SponsorCard
+												sponsorImage={goodenergylogo}
+												sponsorImageAlt="Good Energy Logo"/>
+								</div>
 								<div className="sponsorsContainer"></div>
 								<h2>Silver Sponsors</h2>
 								<p>Spots still available!</p>
 								<div className="sponsorsContainer"></div>
-								<h3>In Partnership With...</h3>
+								<h3>In Partnership With Ignite Peoria and...</h3>
 								<div className="partnersContainer">
 										<SponsorCard
 												sponsorImage={civicCenterlogo}
