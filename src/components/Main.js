@@ -32,13 +32,13 @@ export default class Main extends Component {
 						<li><span>8:30-9 AM: Opening Remarks from the i-team and City of Peoria IT Department</span>
 						<br/><br/>Introduction of the  Hackathon Challenge Statement and a word from our sponsors. </li>
 
-						<li><span>9 AM: HACKATHON BEGINS – GET HACKING!</span>
+						<li><span>9 AM: HACKING BEGINS – GET HACKING!</span>
 							<br/><br/>Registration closes</li>
 						<li><span>1 PM: Lunch – Grab a bite to eat and don’t forget to hydrate!</span></li>
 
 						<li><span>5 PM: Dinner – You’ll want a little extra fuel for these last few hours!</span></li>
 
-						<li><span>7 PM: HACKATHON ENDS</span>
+						<li><span>7 PM: HACKING ENDS</span>
 						<br/><br/>At 7 PM, your project must be submitted and your team must be ready to demonstrate its functionality to the judges panel.</li>
 
 						<li><span>7-7:30 PM: Presentation of demos</span>
