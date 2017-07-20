@@ -137,6 +137,11 @@ a.button:active {
   font-size: 1.8em;
 }
 
+.Content h4 {
+  text-align: center;
+  font-size: 1em;
+}
+
 .interestedSponsor {
   text-align: center;
   font-size: 1em;
@@ -227,6 +232,12 @@ a.button:active {
   color: #fff;
   margin-bottom: 10px;
   text-decoration: none;
+}
+
+.headerLink {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
 }
 
 .flexColumn {

@@ -8,13 +8,14 @@ import ReactFireMixin from 'reactfire'
 const JoinTeamForm = ({ match, history }) => {
     return (<div className='Content'>
         <h2>Join A Team</h2>
+        <h4>Note: all fields are case sensitive.</h4>
         <div className="center-text">
           {
             
             (match.params.id === "new-team") ?
               <div>
                 <p>Success! You have created your team.</p>
-                <p>Please enter your team name and password.</p>
+                <p>To register as an individual on this team, first enter your team name and password below.</p>
               </div>
               : null
           }
