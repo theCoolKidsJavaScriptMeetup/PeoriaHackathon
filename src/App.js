@@ -42,7 +42,7 @@ class App extends Component {
           <Route path='/register/:id' component={RegistrationForm} />
           <Route path='/registerTeam/join/:id' component={JoinTeamForm} />
           <Route path='/registerTeam/create' component={CreateTeamForm} />
-          <Route path='/registered' component={RegistrationSuccess} />
+          <Route path='/registered/:id' component={RegistrationSuccess} />
           
           <Footer />
         </div>

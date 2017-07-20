@@ -10,7 +10,6 @@ import codeOfConductDoc from '../assets/CodeofConductandHarassmentPolicy.pdf'
 
  export default class RegistrationForm extends Component {
     render() {
-        console.log(this.props)
         return ( 
         <div className='Content'>
             <h2>Almost There!</h2>
@@ -61,11 +60,13 @@ const formikEnhancer = Formik({
       firstName: props.user.firstName,
       lastName: props.user.lastName,
       team: props.user.teamName,
-      termsOfUse: props.user.termsOfUse
+      termsOfUse: props.user.termsOfUse,
+      meetup: props.user.meetup,
+      placeOnTeam: props.user.placeOnTeam
   }),
   handleSubmit: (payload, {props, setErrors, setSubmitting}) => {
     var userData = payload;
-    console.log(userData.termsOfUse)
+
     if(userData.termsOfUse) {
 
     } else {
@@ -80,7 +81,8 @@ const formikEnhancer = Formik({
     Firebase.database().ref().update(newUser)
       .then(()=> {
         setSubmitting(false)
-        props.history.push('/registered')})
+        console.log("team", newUser.team)
+        props.history.push('/registered/' + newUser.team)})
       .catch( (err) => {
           setSubmitting(false)
           console.log('err', err)
@@ -172,6 +174,32 @@ const MyForm = ({
       touched.termsOfUse &&
       <div className="input-feedback">
         {errors.termsOfUse}
+      </div>}
+
+      <label><input 
+      id="meetup" 
+      type="checkbox"
+      className=""
+      onBlur={handleBlur}
+      onChange={handleChange}
+      value={values.meetup}/>I am interested in attending Friday's meetup.</label>
+      {errors.meetup &&
+      touched.meetup &&
+      <div className="input-feedback">
+        {errors.meetup}
+      </div>}
+
+      <label><input 
+      id="placeOnTeam" 
+      type="checkbox"
+      className=""
+      onBlur={handleBlur}
+      onChange={handleChange}
+      value={values.placeOnTeam}/>I am interested in attending Friday's meetup.</label>
+      {errors.placeOnTeam &&
+      touched.placeOnTeam &&
+      <div className="input-feedback">
+        {errors.placeOnTeam}
       </div>}
  
     <button type="submit" className="button">Register</button>

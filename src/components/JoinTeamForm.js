@@ -44,11 +44,6 @@ const formikTeamEnhancer = Formik({
       teamPassword: props.team.password
   }),
   handleSubmit: (payload, {props, setErrors, setSubmitting }) => {
-    // setSubmitting(false)
-    
-
-    // TODO: What if database can't be reached?
-    // test for existence
     var ref = Firebase.database().ref("teams")    
     ref.child(payload.teamName).on("value", function(snapshot) {
       var data = snapshot.val()
