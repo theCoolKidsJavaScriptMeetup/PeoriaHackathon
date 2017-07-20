@@ -37,17 +37,15 @@ export default class Sponsors extends Component {
 								<p>Spots still available!</p>
 								<div className="sponsorsContainer"></div>
 								<h3>In Partnership With...</h3>
-								<div className="sponsorsContainer">
+								<div className="partnersContainer">
 										<SponsorCard
 												sponsorImage={civicCenterlogo}
 												sponsorImageAlt="Civic Center Logo"/>
-								</div>
-								<div className="sponsorsContainer">
+								
 										<SponsorCard
 												sponsorImage={rclLogo}
 												sponsorImageAlt="River City Labs"/>
-								</div>
-								<div className="sponsorsContainer">
+								
 										<SponsorCard
 												sponsorImage={artsPartnerslogo}
 												sponsorImageAlt="Arts Partners"/>
