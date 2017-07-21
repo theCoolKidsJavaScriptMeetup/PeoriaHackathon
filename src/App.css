@@ -224,9 +224,7 @@ a.button:active {
 .Footer {
   width:100%;
   margin: 50px auto;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  text-align: center;
 }
 
 .Footer img {
@@ -238,6 +236,19 @@ a.button:active {
 .footerText {
   color: #fff;
   margin-top: 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.createdBy {
+  margin-top:30px;
+}
+
+.createdBy a{
+  color:#8cbace;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
   text-decoration: none;
 }
 
