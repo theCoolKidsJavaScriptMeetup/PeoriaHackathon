@@ -222,12 +222,13 @@ a.button:active {
 }
 
 .Footer {
-  width:100px;
+  width:100%;
   margin: 50px auto;
+  text-align: center;
 }
 
 .Footer img {
-  width: 100%;
+  width: 100px;
   height:auto;
   margin-top:10px;
 }
@@ -236,6 +237,19 @@ a.button:active {
   text-align: center;
   color: #fff;
   margin-bottom: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.createdBy {
+  margin-top:30px;
+}
+
+.createdBy a{
+  color:#8cbace;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
   text-decoration: none;
 }
 
