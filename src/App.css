@@ -230,7 +230,6 @@ a.button:active {
 .Footer img {
   width: 100px;
   height:auto;
-  margin-top:10px;
 }
 
 .footerText {
@@ -241,7 +240,7 @@ a.button:active {
 }
 
 .createdBy {
-  margin-top:30px;
+  margin-top:10px;
 }
 
 .createdBy a{
