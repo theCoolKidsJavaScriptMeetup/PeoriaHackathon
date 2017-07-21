@@ -142,6 +142,11 @@ a.button:active {
   font-size: 1em;
 }
 
+.green {
+  color: #fcb315;
+  display:inline;
+}
+
 .interestedSponsor {
   text-align: center;
   font-size: 1em;
