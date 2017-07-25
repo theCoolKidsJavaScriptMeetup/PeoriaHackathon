@@ -6,6 +6,7 @@ import artsPartnerslogo from '../assets/Arts-Partners-Logo.png';
 import goodenergylogo from '../assets/GoodEnergyLogo.png';
 import CoPlogo from '../assets/CoP-logo.png';
 import sponsorshipPacket from '../assets/SponsorshipPacket.pdf'
+import '../sponsors.css'
 
 const SponsorCard = ({sponsorImage, sponsorImageAlt}) => {
 	return (
@@ -17,13 +18,16 @@ const SponsorCard = ({sponsorImage, sponsorImageAlt}) => {
 	);
 }
 
-const SponsorLevelCard = ({sponsorLevel, sponsors}) => { 
+const SponsorLevelCard = ({sponsorLevel, sponsors, sponsorLevelAvailable}) => { 
 	return (
-		<div className="sponsorLevelContainer">
-			<h2>{sponsorLevel}</h2>
+		<div className="sponsorCard">
+			<div className="sponsorLevelTitle">{sponsorLevel}</div>
 			{sponsors.map(sponsor => (
 				<SponsorCard sponsorImage={sponsor.sponsorImage} sponsorImageAlt={sponsor.sponsorImageAlt} />
 			))}
+			<div>
+				{sponsorLevelAvailable === undefined ? null : <p>Spots still available!</p>}
+			</div>
 		</div>
 	);
 }
@@ -65,19 +69,15 @@ const partners = [
 		sponsorImage: artsPartnerslogo,
 		sponsorImageAlt:"Arts Partners Logo"
 }]
+
 export default class Sponsors extends Component {
 		render() {
 				return (
 						<div className="Content center-text">
 							<SponsorLevelCard sponsorLevel="Platinum Sponsor" sponsors={platinumSponsor} />
-							<SponsorLevelCard sponsorLevel="Gold Sponsors" sponsors={goldSponsors} />
-							<p>Spots still available!</p>
-							<SponsorLevelCard sponsorLevel="Silver Sponsors" sponsors={silverSponsors} />
-							<p>Spots still available!</p>
-															
-							<div className="partnersContainer">
-								<SponsorLevelCard sponsorLevel="Partners" sponsors={partners} />
-							</div>
+							<SponsorLevelCard sponsorLevel="Gold Sponsors" sponsors={goldSponsors} sponsorLevelAvailable="true"/>
+							<SponsorLevelCard sponsorLevel="Silver Sponsors" sponsors={silverSponsors} sponsorLevelAvailable="true"/>
+							<SponsorLevelCard sponsorLevel="Partners" sponsors={partners} />
 							<div className="interestedSponsor">Interested in becoming a sponsor of the Peoria Civic Hackathon? <a href={sponsorshipPacket} target="_blank" rel="noopener noreferrer" className="whiteLink">See here for details.</a></div>
 						</div>
 				);
