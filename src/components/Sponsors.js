@@ -4,6 +4,7 @@ import rclLogo from '../assets/RCL_WHITE.png';
 import civicCenterlogo from '../assets/CivicCenterLogo.png';
 import artsPartnerslogo from '../assets/Arts-Partners-Logo.png';
 import goodenergylogo from '../assets/GoodEnergyLogo.png';
+import cselogo from '../assets/CSELogo.png';
 import CoPlogo from '../assets/CoP-logo.png';
 import sponsorshipPacket from '../assets/SponsorshipPacket.pdf'
 import '../sponsors.css'
@@ -42,6 +43,10 @@ const goldSponsors = [
 ]
 
 const silverSponsors = [
+	{
+		sponsorImage: cselogo,
+		sponsorImageAlt: "CSE Software, Inc. Logo"
+	}
 ]
 
 const platinumSponsor = [
