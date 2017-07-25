@@ -384,4 +384,7 @@ a.whiteLink:active {
   .stacked.button-group {
     width:90%;
   }
+  .button.goldbutton {
+    width: 60%;
+  }
 }
