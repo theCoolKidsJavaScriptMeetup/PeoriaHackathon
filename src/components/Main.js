@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
+import { Link } from 'react-router-dom'
 
 export default class Main extends Component {
   render() {
@@ -9,7 +10,7 @@ export default class Main extends Component {
 	        <div className="Content Content-home">
 		    	<div className="intro_message">
 			    	<h3>On Saturday, August 12th, 2017 The City of Peoria will host the area’s first civic hackathon to engage the local tech community for the purpose of innovating new civic tech solutions.</h3>
-			    	<p>Teams of 2-7 participants will utilize City data while competing to create a website, app, or other tool that could improve the lives of people who live, work, and play in the Peoria area. Peoria Civic Hackathon 2017 is taking place in conjunction with Ignite Peoria, a day-long event at the Peoria Civic Center that attracts thousands of visitors to interact with and learn about the thriving arts and tech community in the region.</p>
+			    	<p>Teams of 2-7 participants will utilize City data while competing to create a website, app, or other tool that could improve the lives of people who live, work, and play in the Peoria area. Presented at the Hackathon will be a Challenge Statement and accompanying data set(s) that may be relevant to creating solutions that address the challenge.</p><p> Peoria Civic Hackathon 2017 is taking place in conjunction with Ignite Peoria, a day-long event at the Peoria Civic Center that attracts thousands of visitors to interact with and learn about the thriving arts and tech community in the region.</p>
 		    	</div>
 
 		    	<div className="agenda">
@@ -30,7 +31,7 @@ export default class Main extends Component {
 						<br/><br/>Stop at the registration table to check-in, grab a name tag, make sure all members of your team are registered, and find out where your team’s work space is located. Teams will have the opportunity to move around once the Hackathon period begins.</li>
 
 						<li><span>8:30-9 AM: Opening Remarks from the i-team and City of Peoria IT Department</span>
-						<br/><br/>Introduction of the  Hackathon Challenge Statement and a word from our sponsors. </li>
+						<br/><br/>This will be the first time that Hackathon participants will hear the challenge statement that they will be solving for during the 10-hour hack. Also, a word from our sponsors. </li>
 
 						<li><span>9 AM: HACKING BEGINS – GET HACKING!</span>
 							<br/><br/>Registration closes</li>
@@ -49,6 +50,7 @@ export default class Main extends Component {
 						<li><span>7:45-8:00 PM: Winners Announced and Presentation of Awards</span></li>
 					</ul>
 		    	</div>
+				
 		    </div>
 		</div>
     );
