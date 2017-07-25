@@ -4,9 +4,9 @@ import '../Registration.css'
 
 const RegistrationButton = ({path, helpText, buttonText}) => {
   return (
-  <div>
+  <div className="registrationButtonContainer">
     <Link className="whitebutton button" to={path}>{buttonText}</Link>
-    {/*<button onClick=""><i className="fa fa-info-circle" aria-hidden="true"></i></button>*/}
+    <i className="fa fa-info-circle helpIcon" aria-hidden="true" title={helpText}></i>
   </div>
   );
 }

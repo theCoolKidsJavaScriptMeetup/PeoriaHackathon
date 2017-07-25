@@ -5,7 +5,6 @@
 
 .sponsorCard {
     color: #000;
-    /*margin: 10px;*/
     break-inside: avoid-column;
     margin: 30px auto;
 }
@@ -19,7 +18,7 @@
     width: 45%;
 }
 
-p {
+p.openSponsorSpots{
     padding-bottom: 10px;
     color: #ffffff
 }

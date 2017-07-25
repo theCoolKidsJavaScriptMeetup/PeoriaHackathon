@@ -27,7 +27,7 @@ const SponsorLevelCard = ({sponsorLevel, sponsors, sponsorLevelAvailable}) => {
 					<SponsorCard sponsorImage={sponsor.sponsorImage} sponsorImageAlt={sponsor.sponsorImageAlt} />
 				)) : null }
 				<div>
-					{sponsorLevelAvailable === undefined ? null : <p>Spots still available!</p>}
+					{sponsorLevelAvailable === undefined ? null : <p className="openSponsorSpots">Spots still available!</p>}
 				</div>
 			</div>
 		</div>

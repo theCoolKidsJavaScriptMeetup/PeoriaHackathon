@@ -44,6 +44,16 @@
     margin:20px auto;
 }
 
+.helpIcon {
+  margin: auto;
+  padding: 2px;
+}
+
+.registrationButtonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 a.register_form_checkboxLabel,
 a.register_form_checkboxLabel:link,
 a.register_form_checkboxLabel:visited,
@@ -71,6 +81,10 @@ a.register_form_checkboxLabel:active {
 @media only screen and (max-width: 500px) {
   .register_form {
     width:95%;
+  }
+
+  .helpIcon {
+    display: none;
   }
   .register_form form input {
     border:1px solid #000;
