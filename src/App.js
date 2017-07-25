@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as HashRouter, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Firebase from 'firebase'
 
 import Navigation from './components/Navigation';
@@ -31,7 +31,7 @@ class App extends Component {
 
   render() {
     return (
-      <HashRouter>
+      <Router>
         <div className="App">
           <Navigation />
 
@@ -46,7 +46,7 @@ class App extends Component {
           
           <Footer />
         </div>
-      </HashRouter>
+      </Router>
     );
   }
 }
