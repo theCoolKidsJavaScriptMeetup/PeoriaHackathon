@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
-import { Link } from 'react-router-dom'
 
 export default class Main extends Component {
   render() {

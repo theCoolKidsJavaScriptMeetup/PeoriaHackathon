@@ -21,12 +21,14 @@ const SponsorCard = ({sponsorImage, sponsorImageAlt}) => {
 const SponsorLevelCard = ({sponsorLevel, sponsors, sponsorLevelAvailable}) => { 
 	return (
 		<div className="sponsorCard">
-			<div className="sponsorLevelTitle">{sponsorLevel}</div>
-			{sponsors.map(sponsor => (
-				<SponsorCard sponsorImage={sponsor.sponsorImage} sponsorImageAlt={sponsor.sponsorImageAlt} />
-			))}
-			<div>
-				{sponsorLevelAvailable === undefined ? null : <p>Spots still available!</p>}
+			<div className="sponsorCardBorder">
+				<div className="sponsorLevelTitle">{sponsorLevel}</div>
+				{sponsors.length > 0 ? sponsors.map(sponsor => (
+					<SponsorCard sponsorImage={sponsor.sponsorImage} sponsorImageAlt={sponsor.sponsorImageAlt} />
+				)) : null }
+				<div>
+					{sponsorLevelAvailable === undefined ? null : <p>Spots still available!</p>}
+				</div>
 			</div>
 		</div>
 	);
@@ -40,9 +42,6 @@ const goldSponsors = [
 ]
 
 const silverSponsors = [
-	{
-
-	}
 ]
 
 const platinumSponsor = [
@@ -73,13 +72,13 @@ const partners = [
 export default class Sponsors extends Component {
 		render() {
 				return (
-						<div className="Content center-text">
-							<SponsorLevelCard sponsorLevel="Platinum Sponsor" sponsors={platinumSponsor} />
-							<SponsorLevelCard sponsorLevel="Gold Sponsors" sponsors={goldSponsors} sponsorLevelAvailable="true"/>
-							<SponsorLevelCard sponsorLevel="Silver Sponsors" sponsors={silverSponsors} sponsorLevelAvailable="true"/>
-							<SponsorLevelCard sponsorLevel="Partners" sponsors={partners} />
-							<div className="interestedSponsor">Interested in becoming a sponsor of the Peoria Civic Hackathon? <a href={sponsorshipPacket} target="_blank" rel="noopener noreferrer" className="whiteLink">See here for details.</a></div>
-						</div>
+					<div className="Content center-text">
+						<SponsorLevelCard sponsorLevel="Platinum Sponsor" sponsors={platinumSponsor} />
+						<SponsorLevelCard sponsorLevel="Gold Sponsors" sponsors={goldSponsors} sponsorLevelAvailable="true"/>
+						<SponsorLevelCard sponsorLevel="Silver Sponsors" sponsors={silverSponsors} sponsorLevelAvailable="true"/>
+						<SponsorLevelCard sponsorLevel="Partners" sponsors={partners} />
+						<div className="interestedSponsor">Interested in becoming a sponsor of the Peoria Civic Hackathon? <a href={sponsorshipPacket} target="_blank" rel="noopener noreferrer" className="whiteLink">See here for details.</a></div>
+					</div>
 				);
 		}
 }
