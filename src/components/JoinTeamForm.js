@@ -48,14 +48,11 @@ const formikTeamEnhancer = Formik({
     var ref = Firebase.database().ref("teams")    
     ref.child(payload.teamName).on("value", function(snapshot) {
       var data = snapshot.val()
-      console.log(data)
       
       // does team exist?
       if (data === null) {
         setErrors({ teamName: "Sorry, that's not an existing team" })
       } else {
-        console.log("db: " + data.teamPassword)
-        console.log("form: " + payload.teamPassword)
         if (data.teamPassword === payload.teamPassword) {
           // Success! Continue to registration!
           props.history.push('/register/' + payload.teamName)

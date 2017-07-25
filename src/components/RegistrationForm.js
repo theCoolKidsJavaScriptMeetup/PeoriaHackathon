@@ -87,7 +87,6 @@ const formikEnhancer = Formik({
     Firebase.database().ref().update(newUser)
       .then(()=> {
         setSubmitting(false)
-        console.log("team", newUser.team)
         props.history.push('/registered/' + newUser.team)})
       .catch( (err) => {
           setSubmitting(false)

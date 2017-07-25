@@ -6,7 +6,6 @@ import ReactMixin from 'react-mixin'
 import ReactFireMixin from 'reactfire'
 
 const CreateTeamForm = ({ match, history }) => {
-  console.log(match.params)
     return (<div className='Content'>
         <h2>Create A Team</h2>
         <div className="register_form">
