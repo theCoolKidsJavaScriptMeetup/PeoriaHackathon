@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
+import Button from './Button';
 
 export default class Main extends Component {
   render() {
@@ -48,6 +49,9 @@ export default class Main extends Component {
 
 						<li><span>7:45-8:00 PM: Winners Announced and Presentation of Awards</span></li>
 					</ul>
+					<div className="button-group">
+						<Button href="/faq" styleName="goldbutton">Learn More</Button>
+					</div>
 		    	</div>
 				
 		    </div>

@@ -49,6 +49,10 @@
   padding: 2px;  
 }
 
+.helpText {
+  display: none;
+}
+
 .registrationButtonContainer {
   display: flex;
   flex-direction: row;
@@ -86,6 +90,11 @@ a.register_form_checkboxLabel:active {
   .helpIcon {
     display: none;
   }
+
+  .helpText {
+    display: block;
+  }
+
   .register_form form input {
     border:1px solid #000;
   }

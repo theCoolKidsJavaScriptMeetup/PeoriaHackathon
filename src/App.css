@@ -49,6 +49,13 @@ a.button:active {
     border:1px solid #fff;
 }
 
+.button.goldbutton {
+    background-color: #FCB720;
+    color: #fff;
+    width: 35%;
+    border:1px solid #fff;
+}
+
 .button:hover {
   background-color: #005AFF;
   transition: 1s ease all;
@@ -57,6 +64,11 @@ a.button:active {
 .button.whitebutton:hover {
     background-color: #EEF2F3;
 }
+
+.button.goldbutton:hover {
+    background-color: #FCB720;
+}
+
 
 .button a {
   display: block;
