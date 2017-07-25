@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Firebase from 'firebase'
 
 import Navigation from './components/Navigation';
@@ -12,6 +12,7 @@ import RegistrationForm from './components/RegistrationForm';
 import CreateTeamForm from './components/CreateTeamForm';
 import JoinTeamForm from './components/JoinTeamForm';
 import RegistrationSuccess from './components/RegistrationSuccess';
+import ScrollToTopRoute from './components/ScrollToTopRoute';
 
 import './App.css';
 
@@ -35,14 +36,14 @@ class App extends Component {
         <div className="App">
           <Navigation />
 
-          <Route exact path="/" component={Main}/>
-          <Route exact path="/sponsors" component={Sponsors}/>
-          <Route exact path="/registration" component={Registration}/>
-          <Route exact path="/faq" component={FAQ}/>
-          <Route path='/register/:id' component={RegistrationForm} />
-          <Route path='/registerTeam/join/:id' component={JoinTeamForm} />
-          <Route path='/registerTeam/create' component={CreateTeamForm} />
-          <Route path='/registered/:id' component={RegistrationSuccess} />
+          <ScrollToTopRoute exact path="/" component={Main}/>
+          <ScrollToTopRoute exact path="/sponsors" component={Sponsors}/>
+          <ScrollToTopRoute exact path="/registration" component={Registration}/>
+          <ScrollToTopRoute exact path="/faq" component={FAQ}/>
+          <ScrollToTopRoute path='/register/:id' component={RegistrationForm} />
+          <ScrollToTopRoute path='/registerTeam/join/:id' component={JoinTeamForm} />
+          <ScrollToTopRoute path='/registerTeam/create' component={CreateTeamForm} />
+          <ScrollToTopRoute path='/registered/:id' component={RegistrationSuccess} />
           
           <Footer />
         </div>
