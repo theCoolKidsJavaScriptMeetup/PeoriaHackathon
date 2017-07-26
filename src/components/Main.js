@@ -20,26 +20,27 @@ export default class Main extends Component {
 
 		    	<div className="agenda">
 		    		<h2>Agenda</h2>
-		    		<h3>Friday Night Social @ <i>TBD</i></h3>
+		    		<h3>Friday Night Social</h3>
+					<h4><i>Location TBD</i></h4>
 			    	<ul>
 			    		<li><span>6-6:30 PM: Check-in, pick up a name tag, and grab a drink (if you wish)!</span></li>
 
 						<li><span>6:30-7 PM: Welcome from the City of Peoria and Q & A session about the Hackathon</span>
-						<br/><br/>Gather with your team or find a team if you are looking to join one. Members from the City of Peoria Innovation Team will answer questions about the hackathon during this time</li>
+						<br/><br/>Gather with your team or find a team if you are looking to join one. Members from the City of Peoria Innovation Team will answer questions about the hackathon.</li>
 
 						<li><span>7-8 PM: Mingle with fellow hackers!</span>
 						<br/><br/>Brainstorm with your team, welcome new team members, or just meet new people and have fun!</li>
 					</ul>
-					<h3>Saturday Meet @ <i>Civic Center Verizon Lobby</i></h3>
+					<h3>Saturday Civic Hackathon</h3>
+					<h4><i>Civic Center Verizon Lobby</i></h4>
 					<ul>
 						<li><span>8-8:30 AM: Check-in and Breakfast</span>
-						<br/><br/>Stop at the registration table to check-in, grab a name tag, make sure all members of your team are registered, and find out where your team’s work space is located. Teams will have the opportunity to move around once the Hackathon period begins.</li>
+						<br/><br/>Stop at the registration table to check-in, grab a name tag, register new team members, and find your team’s work space. Teams will also have the opportunity to move around once the Hackathon period begins.</li>
 
 						<li><span>8:30-9 AM: Opening Remarks from the City of Peoria</span>
 						<br/><br/>This will be the first time that Hackathon participants will hear the challenge statement they will be solving during the 10-hour hack. Also, a word from our sponsors. </li>
 
-						<li><span>9 AM: HACKING BEGINS</span>
-							<br/><br/>Registration closes</li>
+						<li><span>9 AM: Registration Closes and HACKATHON BEGINS</span></li>
 						<li><span>1 PM: Lunch</span></li>
 
 						<li><span>5 PM: Dinner</span></li>
