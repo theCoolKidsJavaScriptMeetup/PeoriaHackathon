@@ -166,34 +166,51 @@ a.button:active {
 }
 
 .intro_message {
-  width:70%;
+  width:100%;
+  background: #FFF;
+  color:#0074A5;
   margin:0px auto;
-  padding:50px 0px;
+  padding:0px 0px;
+  margin:0px 0px 60px 0px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.intro_message h3 {
+.intro_message div {
+  width:50%;
+}
+
+.intro_message div img {
+  height:auto;
+  width: 100%;
+}
+
+.intro_message h2 {
   font-weight: 300;
   font-size:32px;
   margin: 0px;
-  padding: 20px 0px 0px 0px;
 }
 
 .content-bar {
   font-weight: 300;
   font-size:32px;
   text-align: center;
-   margin: 0px;
+  margin: 0px;
   padding: 50px 0px;
   width:100%;
-  color: rgb(0, 116, 165);
-  background: #fff;
   display:flex;
   justify-content: center;
-  }
+}
 
 .content-bar-text {
    width: 75%;
+}
+
+.content-bar-text p {
+  font-size: 18px;
+  font-style: italic;
 }
 
 .intro_message p {

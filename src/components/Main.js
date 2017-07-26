@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
 import Button from './Button';
+import hackathonImage from '../assets/amsterdam-hackathon.jpg';
 
 export default class Main extends Component {
   render() {
@@ -8,14 +9,21 @@ export default class Main extends Component {
     	<div className="color-cover">
 	    	<Header />
 	        <div className="Content Content-home">
-				<div className="content-bar"><div className="content-bar-text">On Saturday, August 12th, 2017, The City of Peoria will host the area’s first civic hackathon to engage the local tech community to innovate new civic tech solutions.</div></div>
-		    	<div className="intro_message">
-					<p><i> Peoria Civic Hackathon 2017 is taking place in conjunction with Ignite Peoria, an event at the Peoria Civic Center that attracts thousands of visitors to interact with the City's thriving arts and tech community.</i></p>	
-			    	<div className = "FaqCard">
-        <div className="FaqQuestion">What is the 2017 Peoria Civic Hackathon?</div>
-        <div className= "FaqAnswer"><p>Individuals or teams of 2-7 participants will come together to solve a local challenge. Participants will receive a Challenge Statement and access to relevant data sets. They will then utilize this data to create a website, app, or other tool that could improve the lives of people who live, work, and play in the Peoria area.</p><p>After the 10 hour hacking session, teams will demo their projects to a panel of judges who will decide which 2 teams created the best solution to the Challenge Statement. The first and runner-up team will receive cash prizes.</p></div>
-    </div>
-			    
+				<div className="content-bar">
+					<div className="content-bar-text">
+						On Saturday, August 12th, 2017, The City of Peoria will host the area’s first civic hackathon to engage the local tech community to innovate new civic tech solutions.
+						<p>Peoria Civic Hackathon 2017 is taking place in conjunction with Ignite Peoria, an event at the Peoria Civic Center that attracts thousands of visitors to interact with the City's thriving arts and tech community.</p>
+					</div>
+				</div>
+
+
+		    	<div className="intro_message">	
+					<div><img src={hackathonImage}/></div>
+			    	<div>
+				        <h2>What is the 2017 Peoria Civic Hackathon?</h2>
+				        <p>Individuals or teams of 2-7 participants will come together to solve a local challenge. Participants will receive a Challenge Statement and access to relevant data sets. They will then utilize this data to create a website, app, or other tool that could improve the lives of people who live, work, and play in the Peoria area.</p>
+				        <p>After the 10 hour hacking session, teams will demo their projects to a panel of judges who will decide which 2 teams created the best solution to the Challenge Statement. The first and runner-up team will receive cash prizes.</p>
+				    </div>
 		    	</div>
 
 		    	<div className="agenda">
