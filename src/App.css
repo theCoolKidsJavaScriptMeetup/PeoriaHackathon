@@ -154,6 +154,16 @@ a.button:active {
   font-size: 1em;
 }
 
+.Content a, a:visited, a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+.Content a:hover {
+  color:#fcb315;  /* mouse over link */
+  text-decoration: none;
+}
+
 .green {
   color: #fcb315;
   display:inline;
