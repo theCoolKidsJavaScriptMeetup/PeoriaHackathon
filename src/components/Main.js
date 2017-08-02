@@ -41,7 +41,7 @@ export default class Main extends Component {
 						<br/><br/>This will be the first time that Hackathon participants will hear the challenge statement they will be solving during the 10-hour hack. Also, a word from our sponsors. </li>
 
 						<li><span>9 AM: Registration Closes and HACKATHON BEGINS</span></li>
-						<li><span>1 PM: Lunch</span></li>
+						<li><span>12 PM: Lunch</span></li>
 
 						<li><span>5 PM: Dinner</span></li>
 
