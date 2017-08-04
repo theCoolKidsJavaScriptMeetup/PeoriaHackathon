@@ -29,7 +29,7 @@ export default class Main extends Component {
 		    	<div className="agenda">
 		    		<h2>Agenda</h2>
 		    		<h3>Friday Night Social</h3>
-					<h4><i>Location TBD</i></h4>
+					<a href="https://goo.gl/maps/UbNtFRxeC3w" target="blank"><h4><i>The Fieldhouse Bar & Grill (The Back Room)</i></h4></a>
 			    	<ul>
 			    		<li><span>6-6:30 PM: Check-in, pick up a name tag, and grab a drink (if you wish)!</span></li>
 
@@ -40,7 +40,7 @@ export default class Main extends Component {
 						<br/><br/>Brainstorm with your team, welcome new team members, or just meet new people and have fun!</li>
 					</ul>
 					<h3>Saturday Civic Hackathon</h3>
-					<h4><i>Civic Center Verizon Lobby</i></h4>
+					<a href="https://goo.gl/maps/LVziKe8tJA82" target="blank"><h4><i>Civic Center Verizon Lobby</i></h4></a>
 					<ul>
 						<li><span>8-8:30 AM: Check-in and Breakfast</span>
 						<br/><br/>Stop at the registration table to check-in, grab a name tag, register new team members, and find your team’s work space. Teams will also have the opportunity to move around once the Hackathon period begins.</li>
@@ -49,7 +49,7 @@ export default class Main extends Component {
 						<br/><br/>This will be the first time that Hackathon participants will hear the challenge statement they will be solving during the 10-hour hack. Also, a word from our sponsors. </li>
 
 						<li><span>9 AM: Registration Closes and HACKATHON BEGINS</span></li>
-						<li><span>1 PM: Lunch</span></li>
+						<li><span>12 PM: Lunch</span></li>
 
 						<li><span>5 PM: Dinner</span></li>
 
