@@ -126,6 +126,10 @@ a.button:active {
   text-align: center;
 }
 
+.header-content i {
+  font-size: 17px;
+}
+
 .Content {
     background: #0074A5;
     color: #FFF;
@@ -154,7 +158,7 @@ a.button:active {
   font-size: 1em;
 }
 
-.Content a, a:visited, a:active {
+.Content a, .Content a:visited, .Content a:active {
   text-decoration: none;
   color: #000;
 }
@@ -176,9 +180,34 @@ a.button:active {
 }
 
 .intro_message {
-  width:70%;
+  width:100%;
+  background: #FFF;
+  color:#0074A5;
   margin:0px auto;
-  padding:50px 0px;
+  padding:0px 0px;
+  margin:0px 0px 60px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.intro_message div {
+  width:50%;
+}
+
+.intro_message div img {
+  height:auto;
+  width: 100%;
+}
+
+.intro_message h2 {
+  font-size:38px;
+}
+
+.registration_intro_message {
+  width:50%;
+  margin:0px auto;
   text-align: center;
 }
 
@@ -192,24 +221,26 @@ a.button:active {
   font-weight: 300;
   font-size:32px;
   margin: 0px;
-  padding: 20px 0px 0px 0px;
 }
 
 .content-bar {
   font-weight: 300;
   font-size:32px;
   text-align: center;
-   margin: 0px;
+  margin: 0px;
   padding: 50px 0px;
   width:100%;
-  color: rgb(0, 116, 165);
-  background: #fff;
   display:flex;
   justify-content: center;
-  }
+}
 
 .content-bar-text {
    width: 75%;
+}
+
+.content-bar-text p {
+  font-size: 18px;
+  font-style: italic;
 }
 
 .intro_message p {
@@ -359,7 +390,11 @@ a.whiteLink:active {
     padding-top:0px;
   }
   .intro_message {
-    width:90%;
+    width:100%;
+    flex-direction: column;
+  }
+  .intro_message div {
+    width: 100%;
   }
   .registration_intro_message {
     width:90%;
@@ -369,6 +404,16 @@ a.whiteLink:active {
   }
   .intro_message p {
     width:90%;
+    padding: 20px 0px;
+  }
+
+  .intro_message h2 {
+    font-size:32px;
+    width:95%;
+    margin:0px auto;
+  }
+  .content-bar-text {
+    font-size: 24px;
   }
   .agenda {
     width:85%;
