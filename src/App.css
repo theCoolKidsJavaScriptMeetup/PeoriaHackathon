@@ -207,6 +207,12 @@ a.button:active {
   text-align: center;
 }
 
+.registration_intro_message {
+  width:50%;
+  margin:0px auto;
+  text-align: center;
+}
+
 .intro_message h3 {
   font-weight: 300;
   font-size:32px;
