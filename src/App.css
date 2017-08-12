@@ -160,7 +160,7 @@ a.button:active {
 
 .Content a, .Content a:visited, .Content a:active {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 .Content a:hover {
