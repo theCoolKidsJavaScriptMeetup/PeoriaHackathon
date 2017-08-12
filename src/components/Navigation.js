@@ -14,7 +14,7 @@ export default class Navigation extends Component {
 
         <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/registration">Registration</Link></li>
+            <li><a href="https://github.com/cityofpeoria/peoriacivichackathon2017" target="blank">Challenge Statement</a></li>
             <li><Link to="/faq">FAQ</Link></li>
             <li><Link to="/sponsors">Sponsors</Link></li>
         </ul>

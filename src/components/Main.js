@@ -11,7 +11,7 @@ export default class Main extends Component {
 	        <div className="Content Content-home">
 				<div className="content-bar">
 					<div className="content-bar-text">
-						On Saturday, August 12th, 2017, The City of Peoria will host the area’s first civic hackathon to engage the local tech community to innovate new civic tech solutions.
+						<a href="https://github.com/cityofpeoria/peoriacivichackathon2017" target="blank"><i className="fa fa-file-code-o"></i> View the Challenge Statement</a>
 						<p>Peoria Civic Hackathon 2017 is taking place in conjunction with Ignite Peoria, an event at the Peoria Civic Center that attracts thousands of visitors to interact with the City's thriving arts and tech community.</p>
 					</div>
 				</div>
