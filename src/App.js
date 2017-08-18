@@ -14,7 +14,7 @@ import JoinTeamForm from './components/JoinTeamForm';
 import RegistrationSuccess from './components/RegistrationSuccess';
 import ScrollToTopRoute from './components/ScrollToTopRoute';
 
-import './App.css';
+import './App.css?ver=1.1';
 
 class App extends Component {
   componentWillMount () {

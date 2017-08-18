@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import termsOfUseDoc from '../assets/ParticipationAgreement.pdf'
 import codeOfConductDoc from '../assets/CodeofConductandHarassmentPolicy.pdf'
 import hackathonMap from '../assets/CivicHackathonMap.pdf'
-import '../faq.css'
+import '../faq.css?ver=1.1'
 
 const FAQCard = ({title, answer}) => { 
     return (<div className = "FaqCard">

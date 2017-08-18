@@ -7,7 +7,7 @@ import goodenergylogo from '../assets/GoodEnergyLogo.png';
 import cselogo from '../assets/CSELogo.png';
 import CoPlogo from '../assets/CoP-logo.png';
 import sponsorshipPacket from '../assets/SponsorshipPacket.pdf'
-import '../sponsors.css'
+import '../sponsors.css?ver=1.1'
 
 const SponsorCard = ({sponsorImage, sponsorImageAlt}) => {
 	return (

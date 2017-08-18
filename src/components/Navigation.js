@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import logo from '../assets/logo.png';
-import '../Navigation.css';
+import '../Navigation.css?ver=1.1';
 
 export default class Navigation extends Component {
   render() {
