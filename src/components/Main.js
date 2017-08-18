@@ -18,7 +18,7 @@ export default class Main extends Component {
 
 
 		    	<div className="intro_message">	
-					<div><img src={hackathonImage} alt="A photo from Peoria's Civic Hackathon 2017"/></div>
+					<div><img src={hackathonImage} alt="Peoria's Civic Hackathon 2017"/></div>
 			    	<div>
 				        <h2>What is the 2017 Peoria Civic Hackathon?</h2>
 				        <p>Individuals or teams of 2-7 participants will come together to solve a local challenge. Participants will receive a Challenge Statement and access to relevant data sets. They will then utilize this data to create a website, app, or other tool that could improve the lives of people who live, work, and play in the Peoria area.</p>
