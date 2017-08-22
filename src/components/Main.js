@@ -12,7 +12,7 @@ export default class Main extends Component {
 				<div className="content-bar">
 					<div className="content-bar-text">
 						<a href="https://github.com/cityofpeoria/peoriacivichackathon2017" target="blank"><i className="fa fa-file-code-o"></i> View the Challenge Statement</a>
-						<p>Peoria Civic Hackathon 2017 is taking place in conjunction with Ignite Peoria, an event at the Peoria Civic Center that attracts thousands of visitors to interact with the City's thriving arts and tech community.</p>
+						<p>Peoria Civic Hackathon 2017 took place in conjunction with Ignite Peoria, an event at the Peoria Civic Center that attracted thousands of visitors to interact with the City's thriving arts and tech community.</p>
 					</div>
 				</div>
 
